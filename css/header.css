@@ -1,0 +1,63 @@
+header-geral{
+    background-color: var(--primarry-bg-color);
+    width: 100%;
+    height: 80vh;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    overflow: hidden;
+}
+
+container-img-perfil{
+width: 80px;
+height: 80px;
+}
+
+img-perfil{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+}
+
+.barra-pesquisa {
+    display: flex;
+    align-items: center;
+    background-color: #f0f4f8;
+    border-radius: 24px;
+    padding: 10px 16px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.icone-busca {
+    width: 20px;
+    height: 20px;
+    color: #6b7280;
+    margin-right: 12px;
+}
+
+.barra-pesquisa input {
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+    color: #374151;
+    font-family: inherit;
+}
+
+.barra-pesquisa input::placeholder {
+    color: #9ca3af;
+}
+
+.barra-pesquisa input::-webkit-search-decoration,
+.barra-pesquisa input::-webkit-search-cancel-button,
+.barra-pesquisa input::-webkit-search-results-button,
+.barra-pesquisa input::-webkit-search-results-decoration {
+    display: none;
+}

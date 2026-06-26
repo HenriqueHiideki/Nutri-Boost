@@ -1,0 +1,30 @@
+:root{
+    --primary-bg-color: #ffffff;
+    --secondary-bg-color: #e6f0f9;
+    --tertiary-bg-color: #5c9ba0;
+    --quarternary-bg-color: #4d9962;
+
+    --primary-font-color: #040508;
+    --secondary-font-color: #ffffff;
+    --tertiary-font-color: #609c70;
+
+    --title-weight: 700;
+    --title-weight-light: 300;
+    --text-weight: 400;
+}
+
+@font-face {
+    font-family: "Montserrat", sans-serif;
+    src: url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+}
+
+@font-face {
+    font-family: "Lora", serif;
+    src: url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
