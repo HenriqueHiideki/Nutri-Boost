@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Nutri Boost - Sistema para Nutricionistas</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,32 +15,56 @@
 </head>
 
 <body>
-    <header class="header-geral">
-        <form role="search" class="barra-pesquisa">
-            <svg class="icone-busca" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="11" cy="11" r="8"></circle>
-                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            </svg>
+    <div class="layout-wrapper">
+        <aside class="sidebar">
+            <div class="logo-container">
+                <img src="./img/logo-nutri-boost.png" alt="Logo da Nutri Boost" class="menu-logo">
+            </div>
 
-            <input type="search" placeholder="Busca..." aria-label="Buscar">
-        </form>
+            <div>
+                <div class="menu-align">
+                    <img src="./img/icon-home.svg" alt="icone de home" class="img-menu">
+                    <p class="text-menu">Dashboard</p>
+                </div>
+                <div class="menu-align">
+                    <img src="./img/icon-user.png" alt="icone de home" class="img-menu">
+                    <p class="text-menu">Pacientes</p>
+                </div>
+                <div class="menu-align">
+                    <img src="./img/icon-relatorio.png" alt="icone de home" class="img-menu">
+                    <p class="text-menu">Relatórios</p>
+                </div>
+                <div class="menu-align">
+                    <img src="./img/icon-configuration.svg" alt="icone de home" class="img-menu">
+                    <p class="text-menu">Configuracoes</p>
+                </div>
+            </div>
+        </aside>
 
-        <div class="container-img-header">
-            <img src="./img/foto-nutricionista.png" alt="foto de uma nutricionista" class="img-perfil">
-            <p class="header-text">Dra. Júlia Macedo</p>
-            <img src="./img/icon-configuration.svg" alt="icone de configuracao" class="img-configuration">
-        </div>
-    </header>
+        <main class="main-content">
+            <header class="header-geral">
+                <form role="search" class="barra-pesquisa">
+                    <svg class="icone-busca" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+
+                    <input type="search" placeholder="Busca..." aria-label="Buscar">
+                </form>
+
+                <div class="container-img-header">
+                    <img src="./img/bell.png" alt="ícone de notificacoes" class="img-notification">
+                    <img src="./img/foto-nutricionista.png" alt="foto de uma nutricionista" class="img-perfil">
+                    <p class="header-text">Dra. Júlia Macedo</p>
+                    <img src="./img/icon-configuration.svg" alt="icone de configuracao" class="img-configuration">
+                </div>
+            </header>
+        </main>
+    </div>
+
     <section>
-        <div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
+        
     </section>
 </body>
 <script src="./js/script.js"></script>
