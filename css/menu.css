@@ -1,3 +1,52 @@
-menuMain{
-    
+.layout-wrapper{
+display: grid;
+grid-template-columns: 360px 1fr;
+min-height: 100vh;
+}
+
+.main-content{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin-top: 15px;
+}
+
+.sidebar{
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    background-color: var(--primary-bg-color);
+    border-right: 1px solid #ddd;
+}
+
+.logo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-logo{
+    width: 280px;
+    width: 280px;
+    margin-bottom: 40px;
+}
+
+.text-menu{
+    font-size: 26px;
+    font-family: "Lora", serif;
+    font-weight: 500;
+}
+
+.img-menu{
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.menu-align{
+    display: flex;
+    margin-top: 30px;
+    margin-left: 40px;
+    gap: 15px;
 }
