@@ -19,6 +19,7 @@ min-height: 100vh;
     padding: 20px;
     box-sizing: border-box;
     background-color: #ffffff;
+    border: 1px solid var(--secondary-bg-color);
 }
 
 .logo-container{

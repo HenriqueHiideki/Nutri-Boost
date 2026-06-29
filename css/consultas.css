@@ -11,3 +11,36 @@
     font-size: 40px;
     margin: 50px 50px;
 }
+
+.consultas-text {
+  font-family: "Lora", serif;
+  font-weight: 700;
+  font-size: 32px;
+  display: flex;
+  white-space: nowrap;
+  color: #333;
+  margin-left: 30px;
+  margin-top: 30px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.container-consultas{
+    border: 1px solid;
+    width: 800px;
+    margin-left: 50px;
+    height: 400px;
+    background-color: var(--primary-bg-color);
+    border-radius: 30px;
+}
+
+.bt-consultas{
+    color: var(--tertiary-font-color);
+}
+
+.card-consultas{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
