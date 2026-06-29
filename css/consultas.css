@@ -1,0 +1,13 @@
+.consultas-geral{
+    background-color: var(--secondary-bg-color);
+    margin-top: 10px;
+    height: 100%;
+}
+
+.consultas-title{
+    color: var(--primary-font-color);
+    font-weight: 700;
+    font-family: "Montserrat", serif;
+    font-size: 40px;
+    margin: 50px 50px;
+}
