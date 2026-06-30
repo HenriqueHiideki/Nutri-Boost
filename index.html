@@ -113,27 +113,39 @@
                     </div>
                 </div>
 
-                <div class="resumo-container">
-                    <p class="resumo-title">Resumo de Paciente</p>
-                    <div class="resumo-align">
-                        
-                        <div class="resumo-item">
-                            <p class="resumo-text">Total de Pacientes</p>
-                            <p class="resumo-number">120</p>
-                        </div>
 
-                        <div class="resumo-item">
-                            <p class="resumo-text">Novos Este Mês</p>
-                            <p class="resumo-number">15</p>
+                <div class="dashboard">
+
+                    <div class="card card-resumo">
+                        <p class="card-title">Resumo de Paciente</p>
+                        <div class="resumo-align">
+                            <div class="resumo-item">
+                                <p class="resumo-text">Total de Pacientes</p>
+                                <p class="resumo-number">120</p>
+                            </div>
+                            <div class="resumo-item">
+                                <p class="resumo-text">Novos Este Mês</p>
+                                <p class="resumo-number">15</p>
+                            </div>
                         </div>
                     </div>
+
+                    <div class="card card-grafico">
+                        <p class="card-title">Atendimentos na Semana</p>
+                        <div class="chart-container">
+                            <canvas id="meuGrafico"></canvas>
+                        </div>
+                    </div>
+
                 </div>
 
             </section>
+
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./js/script.js"></script>
 </body>
-<script src="./js/script.js"></script>
 
 </html>
