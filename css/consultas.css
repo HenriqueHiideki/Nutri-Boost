@@ -29,9 +29,10 @@
   border: 1px solid;
   width: 800px;
   margin-left: 50px;
-  height: 400px;
+  height: 490px;
   background-color: var(--primary-bg-color);
   border-radius: 30px;
+  border: none;
 }
 
 .bt-consultas {
@@ -53,5 +54,42 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 24px;
+  margin: 0 auto;
+
+}
+
+.card-consultas-img {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.card-consultas-text {
+  font-size: 26px;
+  font-family: "Lora", serif;
+  font-weight: 600;
+  margin: auto auto auto 20px;
+}
+
+.card-consultas-container {
+  display: flex;
+  margin: 20px 20px 10px 20px;
+  background-color: var(--secondary-bg-color);
+  border-radius: 10px;
+  height: 100px;
+}
+
+.card-bt-consultas {
+  color: #f4fdf9;
+  font-size: 22px;
+  font-weight: 500;
+  background-color: var(--quarternary-bg-color);
+  border: none;
+  border-radius: 10px;
+  height: 40px;
+  width: 140px;
+  object-fit: contain;
+  cursor: pointer;
+  margin: 30px 30px;
 }
