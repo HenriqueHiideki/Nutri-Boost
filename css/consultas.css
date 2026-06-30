@@ -1,15 +1,15 @@
-.consultas-geral{
-    background-color: var(--secondary-bg-color);
-    margin-top: 10px;
-    height: 100%;
+.consultas-geral {
+  background-color: var(--secondary-bg-color);
+  margin-top: 10px;
+  height: 100%;
 }
 
-.consultas-title{
-    color: var(--primary-font-color);
-    font-weight: 700;
-    font-family: "Montserrat", serif;
-    font-size: 40px;
-    margin: 50px 50px;
+.consultas-title {
+  color: var(--primary-font-color);
+  font-weight: 700;
+  font-family: "Montserrat", serif;
+  font-size: 40px;
+  margin: 50px 50px;
 }
 
 .consultas-text {
@@ -25,22 +25,33 @@
   cursor: pointer;
 }
 
-.container-consultas{
-    border: 1px solid;
-    width: 800px;
-    margin-left: 50px;
-    height: 400px;
-    background-color: var(--primary-bg-color);
-    border-radius: 30px;
+.container-consultas {
+  border: 1px solid;
+  width: 800px;
+  margin-left: 50px;
+  height: 400px;
+  background-color: var(--primary-bg-color);
+  border-radius: 30px;
 }
 
-.bt-consultas{
-    color: var(--tertiary-font-color);
+.bt-consultas {
+  color: var(--tertiary-font-color);
+  margin-right: 30px;
+  margin-top: 35px;
+  font-size: 22px;
+  font-weight: 500;
+  background-color: #f4fdf9;
+  border: 1px solid var(--quarternary-bg-color);
+  border-radius: 10px;
+  height: 40px;
+  width: 160px;
+  object-fit: contain;
+  cursor: pointer;
 }
 
-.card-consultas{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 24px;
+.card-consultas {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
 }
