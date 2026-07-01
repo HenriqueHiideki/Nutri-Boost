@@ -18,8 +18,8 @@
 }
 
 .img-perfil {
-  width: 70px;
-  height: 70px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   object-fit: cover;
   object-fit: contain;
@@ -89,4 +89,29 @@
 .barra-pesquisa input::-webkit-search-results-button,
 .barra-pesquisa input::-webkit-search-results-decoration {
   display: none;
+}
+
+
+@media (max-width: 768px) {
+    .header-geral {
+        flex-wrap: wrap;
+        height: auto;
+        gap: 10px;
+    }
+
+    .barra-pesquisa {
+        height: 45px;
+        margin-left: 0;
+        order: 2;
+        width: 100%;
+    }
+
+    .container-img-header {
+        gap: 15px;
+        order: 1;
+    }
+
+    .header-text {
+        display: none;
+    }
 }

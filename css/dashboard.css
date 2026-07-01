@@ -1,91 +1,155 @@
-
 .dashboard {
-    display: flex;
-    gap: 30px;
-    margin: 30px 50px;
-    align-items: stretch;
+  display: flex;
+  gap: 30px;
+  margin: 30px 50px;
+  align-items: stretch;
 }
 
-.dashboard-layout{
-    display: flex;
-    gap: 30px;
-    margin: 0 50px 30px 50px;
-    align-items: flex-start;
+.dashboard-layout {
+  display: flex;
+  gap: 30px;
+  margin: 0 50px 30px 50px;
+  align-items: flex-start;
 }
 
-.coluna-esquerda{
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    flex: 1;
+.coluna-esquerda {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  flex: 1;
 }
 
-.coluna-direita{
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    width: 340px;
+.coluna-direita {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 340px;
 }
 
 .card {
-    border-radius: 20px;
-    padding: 25px 30px;
-    box-sizing: border-box;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  padding: 25px 30px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
 .card-resumo {
-    background-color: #ceddd1;
-    flex: 1;
+  background-color: #ceddd1;
+  flex: 1;
 }
 
 .card-grafico {
-    background-color: #ffffff;
-   flex: 1.5;
+  background-color: #ffffff;
+  flex: 1.5;
 }
 
 .card-title {
-    color: #1a1a1a;
-    font-weight: 600;
-    font-family: "Montserrat", sans-serif;
-    font-size: 26px;
-    margin: 0 0 25px 0;
+  color: #1a1a1a;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  font-size: 26px;
+  text-align: center;
+  margin: 0 0 50px 0;
 }
 
 .resumo-align {
-    display: flex;
-    gap: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
 }
 .resumo-item {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
 }
 .resumo-text {
-    font-size: 20px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    color: #333;
-    margin: 0;
-    max-width: 100px;
-    line-height: 1.3;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: #333;
+  margin: 0;
+  max-width: 100px;
+  line-height: 1.3;
+  text-align: center;
 }
 .resumo-number {
-    font-size: 38px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
-    color: #000;
-    margin: 0;
+  font-size: 38px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: #000;
+  margin: 0;
 }
 
 .chart-container {
-    position: relative;
-    height: 200px;
-    width: 100%;
+  position: relative;
+  height: 200px;
+  width: 100%;
 }
 
-.linha-inferior{
-    display: flex;
-    gap: 30px;
-    align-items: stretch;
+.linha-inferior {
+  display: flex;
+  gap: 30px;
+  align-items: stretch;
+}
+
+@media (max-width: 1024px) {
+  .dashboard-layout {
+    flex-direction: column;
+    margin: 0 25px 30px 25px;
+  }
+
+  .coluna-direita {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .card-resumo-destaque,
+  .action-geral {
+    flex: 1;
+    min-width: 280px;
+  }
+
+  .linha-inferior {
+    flex-direction: column;
+  }
+   .consultas-geral {
+        height: auto;
+    }
+
+}
+
+@media (max-width: 768px) {
+  .dashboard-layout {
+    margin: 0 15px 20px 15px;
+    gap: 20px;
+  }
+
+  .coluna-direita {
+    flex-direction: column;
+  }
+
+  .card-resumo-destaque,
+  .action-geral {
+    min-width: 100%;
+  }
+
+  .linha-inferior {
+    gap: 20px;
+  }
+
+  .card-title {
+    font-size: 20px;
+  }
+
+  .resumo-number {
+    font-size: 28px;
+  }
+
+  .card-resumo-destaque,
+  .action-geral {
+    min-width: 100%;
+    width: 100%;
+  }
 }
