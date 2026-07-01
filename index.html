@@ -1,46 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nutri Boost - Sistema para Nutricionistas</title>
-    <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <link rel="icon" href="./img/nutrition.png">
+
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/menu.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/consultas.css">
+    <link rel="stylesheet" href="./css/resumo.css">
+    <link rel="stylesheet" href="./css/dashboard.css">
+    <link rel="stylesheet" href="./css/action.css">
 </head>
 
 <body>
 
     <div class="layout-wrapper">
         <aside class="sidebar">
+
+            <!--MODELO RESPONSIVO-->
+            <div class="menu-hamburguer" id="menuToggle">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round">
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+                <span>Menu</span>
+            </div>
+
             <div class="logo-container">
-                <img src="./img/logo-nutri-boost.png" alt="Logo da Nutri Boost" class="menu-logo">
+                <img src="./img/logo-nutri-boost.png" alt="Logo da Nutri Boost" class="menu-logo" width="280"
+                    height="80">
             </div>
 
             <div class="menu-principal">
                 <div class="menu-align menu-active">
-                    <img src="./img/icon-home.svg" alt="icone de home" class="img-menu">
+                    <img src="./img/icon-home.svg" alt="icone de home" class="img-menu" width="40" height="40">
                     <p class="text-menu">Dashboard</p>
                 </div>
                 <div class="menu-align">
-                    <img src="./img/icon-user.png" alt="icone de pacientes" class="img-menu">
+                    <img src="./img/icon-user.png" alt="icone de pacientes" class="img-menu" width="80" height="80">
                     <p class="text-menu">Pacientes</p>
                 </div>
                 <div class="menu-align">
-                    <img src="./img/icon-add-user.png" alt="icone de cadastro" class="img-menu">
+                    <img src="./img/icon-add-user.png" alt="icone de cadastro" class="img-menu" width="80" height="80">
                     <p class="text-menu">Cadastro de Pacientes</p>
                 </div>
                 <div class="menu-align">
-                    <img src="./img/icon-relatorio.png" alt="icone de relatorios" class="img-menu">
+                    <img src="./img/icon-relatorio.png" alt="icone de relatorios" class="img-menu" width="80"
+                        height="80">
                     <p class="text-menu">Relatórios</p>
                 </div>
                 <div class="menu-align">
-                    <img src="./img/icon-configuration.png" alt="icone de configuracao" class="img-menu">
+                    <img src="./img/icon-configuration.png" alt="icone de configuracao" class="img-menu" width="80"
+                        height="80">
                     <p class="text-menu">Configurações</p>
                 </div>
             </div>
@@ -49,15 +71,15 @@
 
             <div class="menu-align-bottom">
                 <div class="menu-align">
-                    <img src="./img/icon-help.png" alt="icone de ajuda" class="img-menu">
+                    <img src="./img/icon-help.png" alt="icone de ajuda" class="img-menu" width="40" height="40">
                     <p class="text-menu">Ajuda</p>
                 </div>
                 <div class="menu-align">
-                    <img src="./img/icon-support.png" alt="icone de suporte" class="img-menu">
+                    <img src="./img/icon-support.png" alt="icone de suporte" class="img-menu" width="40" height="40">
                     <p class="text-menu">Suporte</p>
                 </div>
                 <div class="menu-align">
-                    <img src="./img/icon-logout.png" alt="icone de saida" class="img-menu">
+                    <img src="./img/icon-logout.png" alt="icone de saida" class="img-menu" width="40" height="40">
                     <p class="text-menu">Sair</p>
                 </div>
             </div>
@@ -76,8 +98,10 @@
                 </form>
 
                 <div class="container-img-header">
-                    <img src="./img/bell.png" alt="ícone de notificacoes" class="img-notification">
-                    <img src="./img/foto-nutricionista.png" alt="foto de uma nutricionista" class="img-perfil">
+                    <img src="./img/bell.png" alt="ícone de notificacoes" class="img-notification" width="40"
+                        height="40">
+                    <img src="./img/foto-nutricionista.png" alt="foto de uma nutricionista" class="img-perfil"
+                        width="80" height="80">
                     <p class="header-text">Dra. Júlia Macedo</p>
                     <img src="./img/icon-configuration.png" alt="icone de configuracao" class="img-configuration">
                 </div>
@@ -86,67 +110,89 @@
             <section class="consultas-geral">
                 <p class="consultas-title">Bem Vinda, Dra. Júlia Macedo!</p>
 
-                <div class="container-consultas">
-                    <div class="card-consultas">
-                        <p class="consultas-text">Próximas Consultas</p>
-                        <button type="button" class="bt-consultas">Ver consultas</button>
-                    </div>
-                    <div class="card-consultas-container">
-                        <img src="./img/paciente1.png" alt="imagem ilustrativa de um paciente"
-                            class="card-consultas-img">
-                        <p class="card-consultas-text">Amanda Nunes <span>- 15:00</span></p>
-                        <button type="button" class="card-bt-consultas">Detalhes</button>
-                    </div>
+                <div class="dashboard-layout">
 
-                    <div class="card-consultas-container">
-                        <img src="./img/paciente2.png" alt="imagem ilustrativa de um paciente"
-                            class="card-consultas-img">
-                        <p class="card-consultas-text">Letícia Soares <span>- 17:00</span></p>
-                        <button type="button" class="card-bt-consultas">Detalhes</button>
-                    </div>
+                    <div class="coluna-esquerda">
 
-                    <div class="card-consultas-container">
-                        <img src="./img/paciente3.png" alt="imagem ilustrativa de um paciente"
-                            class="card-consultas-img">
-                        <p class="card-consultas-text">Maria Eduarda <span>- 18:00</span></p>
-                        <button type="button" class="card-bt-consultas">Detalhes</button>
-                    </div>
-                </div>
-
-
-                <div class="dashboard">
-
-                    <div class="card card-resumo">
-                        <p class="card-title">Resumo de Paciente</p>
-                        <div class="resumo-align">
-                            <div class="resumo-item">
-                                <p class="resumo-text">Total de Pacientes</p>
-                                <p class="resumo-number">120</p>
+                        <div class="container-consultas">
+                            <div class="card-consultas">
+                                <p class="consultas-text">Próximas Consultas</p>
+                                <button type="button" class="bt-consultas">Ver consultas</button>
                             </div>
-                            <div class="resumo-item">
-                                <p class="resumo-text">Novos Este Mês</p>
-                                <p class="resumo-number">15</p>
+                            <div class="card-consultas-container">
+                                <img src="./img/paciente1.png" alt="imagem ilustrativa de um paciente"
+                                    class="card-consultas-img" width="80" height="80">
+                                <p class="card-consultas-text">Amanda Nunes <span>- 15:00</span></p>
+                                <button type="button" class="card-bt-consultas">Detalhes</button>
+                            </div>
+
+                            <div class="card-consultas-container">
+                                <img src="./img/paciente2.png" alt="imagem ilustrativa de um paciente"
+                                    class="card-consultas-img" width="80" height="80">
+                                <p class="card-consultas-text">Letícia Soares <span>- 17:00</span></p>
+                                <button type="button" class="card-bt-consultas">Detalhes</button>
+                            </div>
+
+                            <div class="card-consultas-container">
+                                <img src="./img/paciente3.png" alt="imagem ilustrativa de um paciente"
+                                    class="card-consultas-img" width="80" height="80">
+                                <p class="card-consultas-text">Maria Eduarda <span>- 18:00</span></p>
+                                <button type="button" class="card-bt-consultas">Detalhes</button>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="card card-grafico">
-                        <p class="card-title">Atendimentos na Semana</p>
-                        <div class="chart-container">
-                            <canvas id="meuGrafico"></canvas>
+                        <div class="linha-inferior">
+                            <div class="card card-resumo">
+                                <p class="card-title">Resumo de Paciente</p>
+                                <div class="resumo-align">
+                                    <div class="resumo-item">
+                                        <p class="resumo-text">Total de Pacientes</p>
+                                        <p class="resumo-number">120</p>
+                                    </div>
+                                    <div class="resumo-item">
+                                        <p class="resumo-text">Novos Este Mês</p>
+                                        <p class="resumo-number">15</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card card-grafico">
+                                <p class="card-title">Atendimentos na Semana</p>
+                                <div class="chart-container">
+                                    <canvas id="meuGrafico"></canvas>
+                                </div>
+                            </div>
                         </div>
+
+                    </div>
+
+                    <div class="coluna-direita">
+
+                        <div class="card-resumo-destaque">
+                            <p class="card-title">Resumo de Pacientes</p>
+                            <div class="resumo-align">
+                                <div class="resumo-item">
+                                    <p class="resumo-text">Total de Pacientes</p>
+                                    <p class="resumo-number">120</p>
+                                </div>
+                                <div class="resumo-item">
+                                    <p class="resumo-text">Novos Este Mês</p>
+                                    <p class="resumo-number">15</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="action-geral">
+                            <p class="action-title">Ações Rápidas</p>
+                            <div class="action-buttons">
+                                <button type="button" class="btn-action btn-green">Novo Cadastro de Paciente</button>
+                                <button type="button" class="btn-action btn-teal">Criar Plano Alimentar</button>
+                            </div>
+                        </div>
+
                     </div>
 
                 </div>
-
-                <div class="action-geral">
-                    <p class="action-title">Ações Rápidas</p>
-                    <div class="action-buttons">
-                        <button type="button" class="btn-action btn-green">Novo Cadastro de Paciente</button>
-                        <button type="button" class="btn-action btn-teal">Criar Plano Alimentar</button>
-                    </div>
-                </div>
-
             </section>
 
         </div>
