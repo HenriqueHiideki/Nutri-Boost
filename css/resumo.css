@@ -1,0 +1,27 @@
+.card-resumo-destaque {
+    position: relative;
+    background-color: #ceddd1;
+    border-radius: 20px;
+    padding: 25px 30px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    min-height: 220px;
+}
+
+.resumo-destaque-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 55%;
+    object-fit: cover;
+    border-radius: 0 20px 20px 0;
+    z-index: 0;
+}
+
+.card-resumo-destaque .card-title,
+.card-resumo-destaque .resumo-align {
+    position: relative;
+    z-index: 1;
+}

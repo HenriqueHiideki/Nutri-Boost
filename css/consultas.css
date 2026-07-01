@@ -26,8 +26,14 @@
 }
 
 .container-consultas {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: var(--primary-bg-color);
+  border-radius: 30px;
+  padding-bottom: 20px;
   border: 1px solid;
-  width: 930px;
   margin-left: 50px;
   height: 490px;
   background-color: var(--primary-bg-color);
