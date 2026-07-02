@@ -1,11 +1,50 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Nutri Boost</title>
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="./img/nutrition.png">
 </head>
+
 <body>
-    
+    <section class="login-geral">
+        <div class="login-header">
+            <img src="./img/logo-nutri-boost.png" alt="Logo Nutri Boost" class="login-logo">
+        </div>
+        <div class="login-container">
+            <p class="login-title">Seja Bem-Vindo!</p>
+
+
+            <form action="/login.html" method="POST" class="login-form">
+                <div class="login-box">
+                    <input type="email" id="usuario" name="usuario" required autocomplete="username" class="login-input"
+                        placeholder="Digite seu usuário / e-mail">
+                </div>
+
+                <div class="login-box">
+                    <input type="password" name="senha" id="senha" required autocomplete="current-password"
+                        class="login-input" placeholder="Digite sua senha">
+                </div>
+
+                <div class="login-bt-container">
+                    <button type="submit" class="login-bt">Entrar</button>
+                </div>
+
+            </form>
+
+            <a href="cadastro.html" class="login-text">Cadastre-se</a>
+            <a href="#" class="login-text">Redefinir a senha</a>
+        </div>
+    </section>
 </body>
+
 </html>

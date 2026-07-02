@@ -1,0 +1,91 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-geral{
+    background-color: var(--secondary-bg-color);
+    height: 100%;
+} 
+
+.login-container{
+   border: 1px solid red;
+   border-radius: 30px;
+   margin: 0 auto;
+   width: 380px;
+   background-color: var(--primary-bg-color);
+}
+ 
+.login-logo{
+    width: 320px;
+    height: 80px;
+    justify-content: center;
+}
+
+.login-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: var(--secondary-bg-color);
+}
+
+
+.login-title{
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--primary-font-color);
+    text-align: center;
+    font-family: "Montserrat";
+}
+
+.login-box{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.login-input{
+    height: 40px;
+    width: 360px;
+    border-radius: 10px;
+    border: 1px solid var(--quarternary-bg-color);
+    background-color: var(--primary-bg-color);
+    margin: 5px auto;
+    padding-left: 15px;
+}
+
+.login-bt-container{
+    display: flex;
+}
+
+.login-bt{
+    background-color: var(--quarternary-bg-color);
+    color: var(--secondary-font-color);
+    border: none;
+    border-radius: 15px;
+    width: 300px;
+    height: 40px;
+    margin: 20px auto;
+    font-family: "Lora";
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.login-text{
+    color: var(--tertiary-font-color);
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Lora";
+  text-decoration: none;
+}
+
+
+
