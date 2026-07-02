@@ -1,13 +1,15 @@
 .header-geral {
-  background-color: var(--primarry-bg-color);
+  background-color: var(--primary-bg-color);
   width: 100%;
-  height: 80px;
+  min-height: 90px;
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
-  overflow: hidden;
   align-items: center;
   box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .container-img-header {
@@ -18,11 +20,10 @@
 }
 
 .img-perfil {
-  width: 80px;
-  height: 80px;
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
   object-fit: cover;
-  object-fit: contain;
   cursor: pointer;
 }
 
@@ -91,27 +92,40 @@
   display: none;
 }
 
-
 @media (max-width: 768px) {
-    .header-geral {
-        flex-wrap: wrap;
-        height: auto;
-        gap: 10px;
-    }
+  .header-geral {
+    flex-wrap: wrap;
+    min-height: auto;
+    gap: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    padding: 12px 15px;
+  }
 
-    .barra-pesquisa {
-        height: 45px;
-        margin-left: 0;
-        order: 2;
-        width: 100%;
-    }
+  .container-img-header {
+    flex-shrink: 0;
+  }
 
-    .container-img-header {
-        gap: 15px;
-        order: 1;
-    }
+  .img-notification,
+  .img-perfil,
+  .img-configuration {
+    flex-shrink: 0;
+  }
 
-    .header-text {
-        display: none;
-    }
+  .barra-pesquisa {
+    height: 45px;
+    margin-left: 0;
+    order: 2;
+    width: 100%;
+  }
+
+  .container-img-header {
+    gap: 15px;
+    order: 1;
+  }
+
+  .header-text {
+    display: none;
+  }
 }
