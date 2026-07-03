@@ -1,0 +1,189 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.cadastro-bg {
+  background:
+    linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.9) 0%,
+      rgba(255, 255, 255, 0) 50%,
+      rgba(255, 255, 255, 0.9) 100%
+    ),
+    url(../img/bg-nutrition.jpg);
+  background-size: cover;
+  background-position: left center;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.cadastro-container {
+  border-radius: 20px;
+  background-color: var(--primary-bg-color, #ffffff);
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  padding: 30px 35px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.cadastro-logo-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.cadastro-logo {
+  height: 55px;
+  width: auto;
+  margin-bottom: 10px;
+}
+
+.cadastro-logo-container h1 {
+  font-size: 22px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #111;
+}
+
+.cadastro-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.role-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: -5px;
+}
+
+.role-selection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.cadastro-box-nutri,
+.cadastro-box-patient {
+  border-radius: 12px;
+  padding: 15px 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cadastro-box-nutri:hover,
+.cadastro-box-patient:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.cadastro-box-nutri {
+  background-color: #eef5ee;
+  border: 1.5px solid #487855;
+}
+
+.cadastro-box-patient {
+  background-color: #ffffff;
+  border: 1.5px solid #d97742;
+}
+
+.cadastro-img {
+  height: 40px;
+  width: auto;
+  margin-bottom: 8px;
+}
+
+.cadastro-box-nutri h3,
+.cadastro-box-patient h3 {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #111;
+}
+
+.cadastro-box-nutri p,
+.cadastro-box-patient p {
+  font-size: 10.5px;
+  line-height: 1.35;
+  color: #444;
+}
+
+.inputs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.inputs-container input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #789c80;
+  border-radius: 8px;
+  font-size: 13px;
+  outline: none;
+  color: #333;
+  transition: border-color 0.2s;
+}
+
+.inputs-container input:focus {
+  border-color: #437d53;
+  box-shadow: 0 0 0 2px rgba(67, 125, 83, 0.15);
+}
+
+.inputs-container input::placeholder {
+  color: #888;
+}
+
+.password-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.btn-cadastrar {
+  background-color: #437d53;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 14px;
+  font-size: 15px;
+  font-family: 'Lora', serif;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 5px;
+  transition: background-color 0.2s;
+}
+
+.btn-cadastrar:hover {
+  background-color: #356342;
+}
+
+.login-link {
+  text-align: center;
+  font-size: 13px;
+  color: #333;
+  margin-top: 5px;
+}
+
+.login-link a {
+  color: #437d53;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}

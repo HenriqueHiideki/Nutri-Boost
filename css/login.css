@@ -10,82 +10,180 @@ body {
   flex-direction: column;
 }
 
-.login-geral{
-    background-color: var(--secondary-bg-color);
-    height: 100%;
+.login-geral {
+  background-color: var(--secondary-bg-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
 } 
 
-.login-container{
-   border: 1px solid red;
-   border-radius: 30px;
-   margin: 0 auto;
-   width: 380px;
-   background-color: var(--primary-bg-color);
-}
- 
-.login-logo{
-    width: 320px;
-    height: 80px;
-    justify-content: center;
+.login-container {
+  border-radius: 30px;
+  width: 100%;
+  max-width: 380px;
+  background-color: var(--primary-bg-color);
+  padding: 20px 30px 30px 30px;
+  box-sizing: border-box;
+  box-shadow: 10px 10px 5px 0px rgba(75, 74, 74, 0.75);
 }
 
-.login-header{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    background-color: var(--secondary-bg-color);
+.login-logo {
+  width: 320px;
+  height: auto;
 }
 
-
-.login-title{
-    font-size: 26px;
-    font-weight: 700;
-    color: var(--primary-font-color);
-    text-align: center;
-    font-family: "Montserrat";
+.login-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
-.login-box{
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+.login-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--primary-font-color);
+  text-align: center;
+  font-family: "Montserrat";
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 
-.login-input{
-    height: 40px;
-    width: 360px;
-    border-radius: 10px;
-    border: 1px solid var(--quarternary-bg-color);
-    background-color: var(--primary-bg-color);
-    margin: 5px auto;
-    padding-left: 15px;
+.login-box {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
-.login-bt-container{
-    display: flex;
+.login-input {
+  height: 40px;
+  width: 100%; 
+  border-radius: 10px;
+  border: 1px solid var(--quarternary-bg-color);
+  background-color: var(--primary-bg-color);
+  margin: 5px 0;
+  padding-left: 15px;
+  box-sizing: border-box;
 }
 
-.login-bt{
-    background-color: var(--quarternary-bg-color);
-    color: var(--secondary-font-color);
-    border: none;
-    border-radius: 15px;
-    width: 300px;
-    height: 40px;
-    margin: 20px auto;
-    font-family: "Lora";
-    font-size: 16px;
-    font-weight: 400;
+.login-bt-container {
+  display: flex;
 }
 
-.login-text{
-    color: var(--tertiary-font-color);
-    font-size: 18px;
-    font-weight: 600;
-    font-family: "Lora";
+.login-bt {
+  background-color: var(--quarternary-bg-color);
+  color: var(--secondary-font-color);
+  border: none;
+  border-radius: 15px;
+  width: 100%;
+  height: 40px;
+  margin: 20px 0;
+  font-family: "Lora";
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.login-text {
+  color: var(--tertiary-font-color);
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Lora";
   text-decoration: none;
+  display: block;
+  margin: 8px auto;
+}
+
+.login-text-align {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.login-logo-inline {
+  display: none;
 }
 
 
+@media screen and (min-width: 1024px) {
+  .login-geral {
+    position: relative;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0;
+    padding-right: 10%;
+    background-color: #f0f5f2;
+    overflow: hidden;
+  }
 
+  .login-geral::before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 65%;
+    height: 100%;
+    background-image: 
+      linear-gradient(to right, rgba(240, 245, 242, 0) 50%, #f0f5f2 100%),
+      url('../img/bg-nutrition.jpg');
+    
+    background-size: cover;
+    background-position: left center;
+    z-index: 1;
+  }
+
+  .login-header {
+    display: none;
+  }
+
+  .login-logo-inline {
+    display: block;
+    width: 260px;
+    height: 120px;
+    margin: 0 auto 15px auto;
+  }
+
+  .login-container {
+    position: relative;
+    z-index: 2;
+    max-width: 420px;
+    width: 100%;
+    margin: 0;
+    padding: 40px 35px;
+    background-color: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    height: 550px;
+  }
+
+  .login-title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 25px;
+  }
+
+  .login-text-align {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .login-input{
+    height: 50px;
+    font-size: 20px;
+  }
+
+  .login-bt{
+    height: 50px;
+    font-size: 20px;
+  }
+
+  .login-text{
+    font-size: 20px;
+  }
+}
