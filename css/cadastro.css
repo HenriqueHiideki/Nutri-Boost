@@ -190,3 +190,79 @@
 .login-link a:hover {
   text-decoration: underline;
 }
+
+@media screen and (min-width: 1024px) {
+  .cadastro-bg {
+    justify-content: flex-end;
+    padding-right: 8%;
+  }
+
+  .cadastro-container {
+    max-width: 580px;
+    height: auto;
+    max-height: none;
+    padding: 40px 45px;
+  }
+
+  .cadastro-logo {
+    height: 65px;
+  }
+
+  .cadastro-logo-container h1 {
+    font-size: 24px;
+  }
+
+  .cadastro-form {
+    gap: 20px;
+  }
+
+  .role-selection {
+    gap: 20px;
+  }
+
+  .cadastro-box-nutri,
+  .cadastro-box-patient {
+    padding: 20px 15px;
+  }
+
+  .cadastro-img {
+    height: 48px;
+    margin-bottom: 12px;
+  }
+
+  .cadastro-box-nutri h3,
+  .cadastro-box-patient h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .cadastro-box-nutri p,
+  .cadastro-box-patient p {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  .inputs-container {
+    gap: 12px;
+  }
+
+  .inputs-container input {
+    padding: 14px 16px;
+    font-size: 16px;
+  }
+
+  .btn-cadastrar {
+    height: 48px;
+    font-size: 16px;
+    margin-top: 5px;
+  }
+
+  .login-link {
+    font-size: 16px;
+    margin-top: 8px;
+  }
+
+  .role-label {
+    font-size: 16px;
+  }
+}
