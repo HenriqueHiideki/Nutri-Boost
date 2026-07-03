@@ -7,18 +7,37 @@
     <title>Nutri Boost - Alterar Senha</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="icon" href="./img/nutrition.png">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/redefinicao.css">
 </head>
 
 <body>
-    <section class="redefinicao-geral">
-        <div class="redefinicao-img-container">
-            <img src="./img/logo-nutri-boost.png" alt="logo nutri boost" class="redefinicao-img">
+    <section class="redefinicao-bg">
+        <!-- Card branco centralizado -->
+        <div class="redefinicao-card">
+            
+            <div class="logo-container">
+                <img src="./img/logo-nutri-boost.png" alt="logo nutri boost" class="logo-img">
+            </div>
+
+            <h1 class="redefinicao-title">Redefinir sua Senha</h1>
+
+            <div class="padlock-container">
+                <img src="./img/icon-padlock.png" alt="icone de cadeado" class="padlock-img">
+            </div>
+
+            <p class="redefinicao-text">Nós enviaremos um link para você<br>criar uma nova senha.</p>
+
+            <form action="submit" class="redefinicao-form">
+                <input type="email" placeholder="Digite seu e-mail cadastrado" class="redefinicao-email" required>
+                
+                <button type="submit" class="redefinicao-button">Enviar link</button>
+                
+                <a href="#" class="redefinicao-button-back">Voltar para o Login</a>
+            </form>
+
         </div>
     </section>
 </body>
