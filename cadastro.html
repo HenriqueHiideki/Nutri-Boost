@@ -1,0 +1,61 @@
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutri Boost - Cadastro</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/cadastro.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="./img/nutrition.png">
+</head>
+
+<body>
+    <section class="cadastro-bg">
+        <div class="cadastro-container">
+            <div class="cadastro-logo-container">
+                <img src="./img/logo-nutri-boost.png" alt="logo nutri boost" class="cadastro-logo">
+                <h1>Crie sua Conta</h1>
+            </div>
+
+            <form action="select" class="cadastro-form">
+                <p class="role-label">Você é um:</p>
+                
+                <!-- Caixas de seleção organizadas em grid de 2 colunas -->
+                <div class="role-selection">
+                    <div class="cadastro-box-nutri">
+                        <img src="./img/icon-nutritionist.png" alt="icone nutricionista" class="cadastro-img">
+                        <h3>Nutricionista</h3>
+                        <p>Profissional de Saúde: Gerencie seus pacientes, crie planos alimentares e acompanhe o progresso.</p>
+                    </div>
+
+                    <div class="cadastro-box-patient">
+                        <img src="./img/icon-patient.png" alt="icone paciente" class="cadastro-img">
+                        <h3>Paciente</h3>
+                        <p>Usuário do Sistema: Acesse seus planos alimentares, acompanhe seu progresso e comunique-se.</p>
+                    </div>
+                </div>
+
+                <!-- Lista de Inputs empilhados verticalmente -->
+                <div class="inputs-container">
+                    <input type="text" placeholder="Nome Completo" required>
+                    <input type="email" name="email" id="email" placeholder="E-mail" required>
+                    
+                    <!-- Senhas organizadas lado a lado -->
+                    <div class="password-row">
+                        <input type="password" placeholder="Senha" required>
+                        <input type="password" placeholder="Confirmar Senha" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-cadastrar">Cadastrar</button>
+
+                <p class="login-link">Já tem conta? <a href="#">Entrar</a></p>
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>
