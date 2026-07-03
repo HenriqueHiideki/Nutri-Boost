@@ -1,159 +1,111 @@
 .consultas-geral {
-  background-color: var(--secondary-bg-color);
-  margin-top: 10px;
-  padding-bottom: 40px;
+    background-color: var(--secondary-bg-color);
+    padding-bottom: 50px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .consultas-title {
-  color: var(--primary-font-color);
-  font-weight: 700;
-  font-family: "Montserrat", serif;
-  font-size: 40px;
-  margin: 50px 50px;
+    color: var(--primary-font-color);
+    font-weight: 700;
+    font-family: "Montserrat", serif;
+    font-size: clamp(22px, 2vw, 30px);
+    margin: clamp(20px, 3vh, 35px) clamp(20px, 3vw, 40px);
 }
 
 .consultas-text {
-  font-family: "Lora", serif;
-  font-weight: 700;
-  font-size: 32px;
-  display: flex;
-  white-space: nowrap;
-  color: #333;
-  margin-left: 30px;
-  margin-top: 30px;
-  object-fit: contain;
-  cursor: pointer;
+    font-family: "Lora", serif;
+    font-weight: 700;
+    font-size: clamp(18px, 1.5vw, 24px);
+    color: #333;
+    margin: 0;
 }
 
 .container-consultas {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  background-color: var(--primary-bg-color);
-  border-radius: 30px;
-  padding-bottom: 20px;
-  border: 1px solid;
-  height: 490px;
-  background-color: var(--primary-bg-color);
-  border-radius: 30px;
-  border: none;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background-color: var(--primary-bg-color);
+    border-radius: 20px;
+    padding: 20px;
+    height: auto;
 }
 
 .bt-consultas {
-  color: var(--tertiary-font-color);
-  margin: 30px;
-  justify-content: left;
-  font-size: 22px;
-  font-weight: 500;
-  background-color: #f4fdf9;
-  border: 1px solid var(--quarternary-bg-color);
-  border-radius: 10px;
-  height: 40px;
-  width: 160px;
-  object-fit: contain;
-  cursor: pointer;
+    color: var(--tertiary-font-color);
+    font-size: clamp(13px, 1vw, 15px);
+    font-weight: 500;
+    background-color: #f4fdf9;
+    border: 1px solid var(--quarternary-bg-color);
+    border-radius: 8px;
+    padding: 8px 16px;
+    cursor: pointer;
 }
 
 .card-consultas {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0;
-  width: 100%;
-  box-sizing: border-box;
-
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%;
 }
 
 .card-consultas-img {
-  height: 80px;
-  width: 80px;
-  border-radius: 50%;
-  margin: 10px;
+    height: clamp(42px, 3.5vw, 54px);
+    width: clamp(42px, 3.5vw, 54px);
+    border-radius: 50%;
+    margin-right: 15px;
+    object-fit: cover;
 }
 
 .card-consultas-text {
-  font-size: 26px;
-  font-family: "Lora", serif;
-  font-weight: 600;
-  margin: auto auto auto 20px;
+    font-size: clamp(14px, 1.1vw, 17px);
+    font-family: "Lora", serif;
+    font-weight: 600;
+    flex: 1;
+    margin: 0;
 }
 
 .card-consultas-container {
-  display: flex;
-  margin: 20px 20px 10px 20px;
-  background-color: var(--secondary-bg-color);
-  border-radius: 10px;
-  height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    background-color: var(--secondary-bg-color);
+    border-radius: 12px;
+    height: auto;
 }
 
 .card-bt-consultas {
-  color: #f4fdf9;
-  font-size: 22px;
-  font-weight: 500;
-  background-color: var(--quarternary-bg-color);
-  border: none;
-  border-radius: 10px;
-  height: 40px;
-  width: 140px;
-  object-fit: contain;
-  cursor: pointer;
-  margin: 30px 30px;
-}
-
-@media (max-width: 1024px) {
-    .container-consultas {
-        margin-left: 0;
-        height: auto;
-    }
-
-    .consultas-title {
-        margin: 30px 25px;
-        font-size: 30px;
-    }
+    color: #f4fdf9;
+    font-size: clamp(12px, 0.9vw, 14px);
+    font-weight: 500;
+    background-color: var(--quarternary-bg-color);
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    cursor: pointer;
 }
 
 @media (max-width: 768px) {
-    .consultas-title {
-        margin: 20px 15px;
-        font-size: 24px;
-    }
-
     .card-consultas {
         flex-direction: column;
         align-items: flex-start;
         gap: 12px;
-        padding: 20px 20px 0 20px;
-    }
-
-    .consultas-text {
-        font-size: 22px;
-        margin: 0;
-    }
-
-    .bt-consultas {
-        margin: 0;
     }
 
     .card-consultas-container {
         flex-direction: column;
         align-items: flex-start;
-        height: auto;
-        padding: 15px;
-        gap: 10px;
+        gap: 12px;
     }
 
     .card-consultas-img {
         margin: 0;
     }
 
-    .card-consultas-text {
-        font-size: 18px;
-        margin: 0;
-    }
-
     .card-bt-consultas {
-        margin: 0;
         width: 100%;
     }
 }
