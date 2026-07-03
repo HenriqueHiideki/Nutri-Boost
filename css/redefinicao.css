@@ -1,0 +1,15 @@
+.redefinicao-geral{
+    background-color: #eef5ee;
+    width: 100%;
+    height: 610px;
+}
+
+.redefinicao-img{
+    width: 70%;
+    height: 80px;
+}
+
+.redefinicao-img-container{
+    display: flex;
+    justify-content: center;
+}
