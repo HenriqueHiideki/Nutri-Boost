@@ -1,0 +1,210 @@
+.pacientes-section {
+  margin-top: 26px;
+}
+
+.pacientes-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.pacientes-tools {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.filtro-status {
+  display: flex;
+  gap: 6px;
+  background: var(--primary-bg-color);
+  padding: 5px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.filtro-btn {
+  border: none;
+  background: transparent;
+  padding: 8px 14px;
+  border-radius: 9px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--texto-suave);
+}
+
+.filtro-btn.ativo-filtro {
+  background: var(--quarternary-bg-color);
+  color: #fff;
+}
+
+.btn-novo-paciente {
+  background: var(--quarternary-bg-color);
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 12.5px;
+  cursor: pointer;
+}
+
+.pacientes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.paciente-card {
+  background: var(--primary-bg-color);
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: var(--shadow);
+  transition: 0.18s;
+}
+
+.paciente-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(31, 42, 36, 0.1);
+}
+
+.paciente-card-top {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.paciente-nome {
+  font-weight: 700;
+  font-size: 14.5px;
+  font-family: "Lora", serif;
+}
+
+.paciente-meta {
+  font-size: 11.5px;
+  color: var(--texto-suave);
+  margin-top: 2px;
+}
+
+.badge-row {
+  display: flex;
+  gap: 6px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.badge-ativo {
+  background: var(--verde-claro);
+  color: var(--verde-escuro);
+}
+
+.badge-acompanhamento {
+  background: var(--teal-claro);
+  color: #356b6b;
+}
+
+.badge-aguardando {
+  background: #fbf1da;
+  color: #96772a;
+}
+
+.badge-inativo {
+  background: #eef0ee;
+  color: var(--cinza);
+}
+
+.badge-obj-emagrecimento {
+  background: #fdf1e2;
+  color: var(--laranja);
+}
+
+.badge-obj-massa {
+  background: #e9eefb;
+  color: var(--azul-obj);
+}
+
+.badge-obj-definicao {
+  background: #f2ecfb;
+  color: var(--roxo-obj);
+}
+
+.composicao-mini {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--borda);
+}
+
+
+.comp-legend {
+  font-size: 11px;
+  color: var(--texto-suave);
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.dot-legend {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.paciente-card-actions {
+  display: flex;
+  gap: 6px;
+  margin-top: 14px;
+}
+
+.mini-action {
+  flex: 1;
+  border: 1px solid var(--borda);
+  background: transparent;
+  border-radius: 8px;
+  padding: 7px 4px;
+  font-size: 10.5px;
+  font-weight: 700;
+  color: var(--texto-suave);
+  text-align: center;
+  text-decoration: none;
+}
+
+.mini-action:hover {
+  background: var(--fundo);
+  color: var(--verde-escuro);
+  border-color: var(--verde-claro);
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 1050px) {
+  .dashboard-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .sidebar {
+    display: none;
+  }
+  .header-geral {
+    padding: 14px 16px;
+  }
+  .consultas-geral {
+    padding: 18px 16px;
+  }
+}
