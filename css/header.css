@@ -77,39 +77,26 @@
   display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
   .header-geral {
-    flex-wrap: wrap;
-    min-height: auto;
-    gap: 10px;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    padding: 12px 15px;
-  }
-
-  .container-img-header {
-    flex-shrink: 0;
-  }
-
-  .img-notification,
-  .img-perfil,
-  .img-configuration {
-    flex-shrink: 0;
-  }
-
-  .barra-pesquisa {
-    height: 45px;
-    margin-left: 0;
-    order: 2;
-    width: 100%;
-  }
-
-  .container-img-header {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 15px 20px;
     gap: 15px;
+  }
+
+  .container-img-header {
+    justify-content: space-between;
     order: 1;
   }
 
+  .barra-pesquisa {
+    max-width: 100%;
+    order: 2;
+  }
+}
+
+@media (max-width: 480px) {
   .header-text {
     display: none;
   }

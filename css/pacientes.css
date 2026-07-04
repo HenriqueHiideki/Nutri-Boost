@@ -83,20 +83,20 @@
   font-family: "Lora", serif;
 }
 
-.paciente-meta {
+.paciente-info {
   font-size: 11.5px;
   color: var(--texto-suave);
   margin-top: 2px;
 }
 
-.badge-row {
+.paciente-staus {
   display: flex;
   gap: 6px;
   margin-top: 10px;
   flex-wrap: wrap;
 }
 
-.badge {
+.status {
   font-size: 10px;
   font-weight: 700;
   padding: 4px 10px;
@@ -104,37 +104,37 @@
   white-space: nowrap;
 }
 
-.badge-ativo {
+.status-ativo {
   background: var(--verde-claro);
   color: var(--verde-escuro);
 }
 
-.badge-acompanhamento {
+.status-acompanhamento {
   background: var(--teal-claro);
   color: #356b6b;
 }
 
-.badge-aguardando {
+.status-aguardando {
   background: #fbf1da;
   color: #96772a;
 }
 
-.badge-inativo {
+.status-inativo {
   background: #eef0ee;
   color: var(--cinza);
 }
 
-.badge-obj-emagrecimento {
+.status-obj-emagrecimento {
   background: #fdf1e2;
   color: var(--laranja);
 }
 
-.badge-obj-massa {
+.status-obj-massa {
   background: #e9eefb;
   color: var(--azul-obj);
 }
 
-.badge-obj-definicao {
+.status-obj-definicao {
   background: #f2ecfb;
   color: var(--roxo-obj);
 }
