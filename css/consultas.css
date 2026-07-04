@@ -1,111 +1,119 @@
 .consultas-geral {
-    background-color: var(--secondary-bg-color);
-    padding-bottom: 50px;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+  padding: 26px 32px 60px;
 }
 
 .consultas-title {
-    color: var(--primary-font-color);
-    font-weight: 700;
-    font-family: "Montserrat", serif;
-    font-size: clamp(22px, 2vw, 30px);
-    margin: clamp(20px, 3vh, 35px) clamp(20px, 3vw, 40px);
+  font-size: 24px;
+  font-weight: 700;
+  font-family: "Lora", serif;
 }
 
 .consultas-text {
-    font-family: "Lora", serif;
-    font-weight: 700;
-    font-size: clamp(18px, 1.5vw, 24px);
-    color: #333;
-    margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: "Lora", serif;
+}
+
+.topo-barra-title {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.consultas-sub {
+  color: var(--texto-suave);
+  font-size: 18px;
+  margin-top: 4px;
 }
 
 .container-consultas {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    background-color: var(--primary-bg-color);
-    border-radius: 20px;
-    padding: 20px;
-    height: auto;
+  background: var(--primary-bg-color);
+  border-radius: 16px;
+  padding: 18px 20px;
+  box-shadow: var(--shadow);
 }
 
 .bt-consultas {
-    color: var(--tertiary-font-color);
-    font-size: clamp(13px, 1vw, 15px);
-    font-weight: 500;
-    background-color: #f4fdf9;
-    border: 1px solid var(--quarternary-bg-color);
-    border-radius: 8px;
-    padding: 8px 16px;
-    cursor: pointer;
+  background: transparent;
+  border: 1.5px solid var(--quarternary-bg-color);
+  color: var(--quarternary-bg-color);
+  font-weight: 700;
+  font-size: 12px;
+  padding: 7px 14px;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
 .card-consultas {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-    width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
 }
 
 .card-consultas-img {
-    height: clamp(42px, 3.5vw, 54px);
-    width: clamp(42px, 3.5vw, 54px);
-    border-radius: 50%;
-    margin-right: 15px;
-    object-fit: cover;
+  height: clamp(42px, 3.5vw, 54px);
+  width: clamp(42px, 3.5vw, 54px);
+  border-radius: 50%;
+  margin-right: 15px;
+  object-fit: cover;
 }
 
 .card-consultas-text {
-    font-size: clamp(14px, 1.1vw, 17px);
-    font-family: "Lora", serif;
-    font-weight: 600;
-    flex: 1;
-    margin: 0;
+  flex: 1;
+  font-size: 13.5px;
+  font-weight: 600;
+}
+.card-consultas-text span {
+  color: var(--texto-suave);
+  font-weight: 500;
+}
+.card-consultas-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  border-radius: 12px;
+  margin-bottom: 6px;
+  transition: 0.15s;
 }
 
-.card-consultas-container {
-    display: flex;
-    align-items: center;
-    padding: 12px 16px;
-    background-color: var(--secondary-bg-color);
-    border-radius: 12px;
-    height: auto;
+.card-consultas-container:hover {
+  background-color: var(--verde-claro);
 }
 
 .card-bt-consultas {
-    color: #f4fdf9;
-    font-size: clamp(12px, 0.9vw, 14px);
-    font-weight: 500;
-    background-color: var(--quarternary-bg-color);
-    border: none;
-    border-radius: 8px;
-    padding: 8px 16px;
-    cursor: pointer;
+  color: #f4fdf9;
+  font-size: clamp(12px, 0.9vw, 14px);
+  font-weight: 500;
+  background-color: var(--quarternary-bg-color);
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {
-    .card-consultas {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
-    }
+  .card-consultas {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
 
-    .card-consultas-container {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
-    }
+  .card-consultas-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
 
-    .card-consultas-img {
-        margin: 0;
-    }
+  .card-consultas-img {
+    margin: 0;
+  }
 
-    .card-bt-consultas {
-        width: 100%;
-    }
+  .card-bt-consultas {
+    width: 100%;
+  }
 }

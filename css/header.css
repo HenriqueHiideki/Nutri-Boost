@@ -1,15 +1,10 @@
 .header-geral {
-  background-color: var(--primary-bg-color);
-  width: 100%;
-  min-height: clamp(65px, 7vh, 80px);
-  padding: 10px clamp(15px, 2vw, 30px);
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  box-sizing: border-box;
-  position: sticky;
-  top: 0;
-  z-index: 10;
+  justify-content: space-between;
+  padding: 16px 32px;
+  background: var(--primary-bg-color);
+  border-bottom: 1px solid var(--borda);
 }
 
 .container-img-header {
