@@ -41,45 +41,44 @@
             </div>
 
             <nav class="menu-principal">
-                <div class="menu-align menu-active">
-                    <img src="./img/icon-home.svg" alt="icone de home" class="img-menu" width="40" height="40">
-                    <p class="text-menu">Dashboard</p>
-                </div>
-                <div class="menu-align">
-                    <img src="./img/icon-user.png" alt="icone de pacientes" class="img-menu" width="80" height="80">
-                    <p class="text-menu">Pacientes</p>
-                </div>
-                <div class="menu-align">
-                    <img src="./img/icon-add-user.png" alt="icone de cadastro" class="img-menu" width="80" height="80">
-                    <p class="text-menu">Cadastro de Pacientes</p>
-                </div>
-                <div class="menu-align">
-                    <img src="./img/icon-relatorio.png" alt="icone de relatorios" class="img-menu" width="80"
-                        height="80">
-                    <p class="text-menu">Relatórios</p>
-                </div>
-                <div class="menu-align">
-                    <img src="./img/icon-configuration.png" alt="icone de configuracao" class="img-menu" width="80"
-                        height="80">
-                    <p class="text-menu">Configurações</p>
-                </div>
+                <a href="#" class="menu-align menu-active">
+                    <img src="./img/icon-home.svg" alt="icone de home" class="menu-icon">
+                    <p>Dashboard</p>
+                </a>
+                <a href="#pacientes" class="menu-align">
+                    <img src="./img/icon-user.png" alt="icone de pacientes" class="menu-icon">
+                    <p>Pacientes</p>
+                    <span class="menu-badge">120</span>
+                </a>
+                <a href="#" class="menu-align">
+                    <img src="./img/icon-add-user.png" alt="icone de cadastro" class="menu-icon">
+                    <p>Cadastro de Pacientes</p>
+                </a>
+                <a href="#" class="menu-align">
+                    <img src="./img/icon-relatorio.png" alt="icone de relatorios" class="menu-icon">
+                    <p>Relatórios</p>
+                </a>
+                <a href="#" class="menu-align">
+                    <img src="./img/icon-configuration.png" alt="icone de configuracao" class="menu-icon">
+                    <p>Configurações</p>
+                </a>
             </nav>
 
             <hr class="divisor-menu">
 
             <div class="menu-align-bottom">
-                <div class="menu-align">
-                    <img src="./img/icon-help.png" alt="icone de ajuda" class="img-menu" width="40" height="40">
+                <a href="#" class="menu-align">
+                    <img src="./img/icon-help.png" alt="icone de ajuda" class="menu-icon" width="40" height="40">
                     <p class="text-menu">Ajuda</p>
-                </div>
-                <div class="menu-align">
-                    <img src="./img/icon-support.png" alt="icone de suporte" class="img-menu" width="40" height="40">
+                </a>
+                <a href="#" class="menu-align">
+                    <img src="./img/icon-support.png" alt="icone de suporte" class="menu-icon" width="40" height="40">
                     <p class="text-menu">Suporte</p>
-                </div>
-                <div class="menu-align">
-                    <img src="./img/icon-logout.png" alt="icone de saida" class="img-menu" width="40" height="40">
+                </a>
+                <a href="#" class="menu-align">
+                    <img src="./img/icon-logout.png" alt="icone de saida" class="menu-icon" width="40" height="40">
                     <p class="text-menu">Sair</p>
-                </div>
+                </a>
             </div>
         </aside>
 
@@ -91,7 +90,8 @@
                         <circle cx="11" cy="11" r="8"></circle>
                         <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                     </svg>
-                    <input type="search" placeholder="Busca..." aria-label="Buscar">
+                    <input type="search" placeholder="Buscar pacientes, dietas, relatórios..." aria-label="Buscar"
+                        class="header-text">
                 </form>
 
                 <div class="container-img-header">
@@ -105,7 +105,12 @@
             </header>
 
             <section class="consultas-geral">
-                <p class="consultas-title">Bem Vinda, Dra. Júlia Macedo!</p>
+                <div class="topo-barra-title">
+                    <div>
+                        <p class="consultas-title">Bem-vinda, Dra. Júlia Macedo!</p>
+                        <p class="consultas-sub">Aqui está o panorama da sua clínica hoje.</p>
+                    </div>
+                </div>
 
                 <div class="dashboard-layout">
 
@@ -166,25 +171,32 @@
                                 </ul>
                             </div>
 
-                            <div class="card card-grafico">
+                            <div class="card">
                                 <div class="grafico-header">
-                                    <p class="card-title" style="margin: 0;">Atendimentos na Semana</p>
-
-                                    <label class="seletor-data" title="Selecionar Data">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
-                                            viewBox="0 0 24 24" fill="none" stroke="#437d53" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round">
-                                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                                            <line x1="16" y1="2" x2="16" y2="6"></line>
-                                            <line x1="8" y1="2" x2="8" y2="6"></line>
-                                            <line x1="3" y1="10" x2="21" y2="10"></line>
-                                        </svg>
-                                        <input type="date" class="input-calendario-invisivel" id="filtroData">
-                                    </label>
+                                    <p class="card-title" style="margin:0;">Atendimentos na Semana</p>
                                 </div>
-
-                                <div class="chart-container">
-                                    <canvas id="meuGrafico"></canvas>
+                                <div class="bar-chart">
+                                    <div class="bar-col">
+                                        <div class="bar" style="height:35%"></div><span class="bar-label">Seg</span>
+                                    </div>
+                                    <div class="bar-col">
+                                        <div class="bar" style="height:50%"></div><span class="bar-label">Ter</span>
+                                    </div>
+                                    <div class="bar-col">
+                                        <div class="bar" style="height:28%"></div><span class="bar-label">Qua</span>
+                                    </div>
+                                    <div class="bar-col">
+                                        <div class="bar" style="height:65%"></div><span class="bar-label">Qui</span>
+                                    </div>
+                                    <div class="bar-col">
+                                        <div class="bar" style="height:100%"></div><span class="bar-label">Sex</span>
+                                    </div>
+                                    <div class="bar-col">
+                                        <div class="bar" style="height:42%"></div><span class="bar-label">Sáb</span>
+                                    </div>
+                                    <div class="bar-col">
+                                        <div class="bar" style="height:20%"></div><span class="bar-label">Dom</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -196,11 +208,11 @@
                         <div class="card-resumo-destaque">
                             <p class="card-title">Resumo de Pacientes</p>
                             <div class="resumo-align">
-                                <div class="resumo-item">
+                                <div>
                                     <p class="resumo-text">Total de Pacientes</p>
                                     <p class="resumo-number">120</p>
                                 </div>
-                                <div class="resumo-item">
+                                <div>
                                     <p class="resumo-text">Novos Este Mês</p>
                                     <p class="resumo-number">15</p>
                                 </div>
@@ -210,7 +222,7 @@
                         <div class="action-geral">
                             <p class="action-title">Ações Rápidas</p>
                             <div class="action-buttons">
-                                <button type="button" class="btn-action btn-green">Novo Cadastro de Paciente</button>
+                                <button type="button" class="btn-action btn-green">Agendar consulta</button>
                                 <button type="button" class="btn-action btn-teal">Criar Plano Alimentar</button>
                             </div>
                         </div>

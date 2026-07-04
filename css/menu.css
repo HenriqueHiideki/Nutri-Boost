@@ -5,11 +5,9 @@
 }
 
 .main-content {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  overflow-y: auto;
-  margin-top: 15px;
+  flex: 1;
+  min-width: 0;
+  background-color: var(--secondary-bg-color);
 }
 
 .sidebar {
@@ -49,21 +47,23 @@
   font-weight: 500;
 }
 
-.img-menu {
-  width: clamp(20px, 1.5vw, 24px);
-  height: clamp(20px, 1.5vw, 24px);
-  object-fit: contain;
+.menu-icon {
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
 }
 
 .menu-align {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: clamp(8px, 1vh, 12px) 14px;
-  border-radius: 8px;
-  margin-bottom: 4px;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
+  padding: 11px 12px;
+  border-radius: 10px;
+  color: var(--texto-suave);
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.15s;
 }
 
 .menu-align:hover {
