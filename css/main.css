@@ -34,6 +34,34 @@ body {
   background: var(--fundo);
   color: var(--texto);
 }
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+
+img, svg, input, button {
+  max-width: 100%;
+}
+
+.layout-wrapper,
+.main-content,
+.header-geral,
+.container-img-header,
+.consultas-geral,
+.dashboard-layout,
+.coluna-esquerda,
+.coluna-direita,
+.container-consultas,
+.card-consultas,
+.card-consultas-container,
+.card-consultas-text,
+.barra-pesquisa,
+.linha-inferior,
+.card {
+  min-width: 0;
+  box-sizing: border-box;
+}
 h1,
 h2,
 h3 {
@@ -58,4 +86,41 @@ h3 {
     width: 100%;
     max-width: 100%;
   }
+
+
+
+
+
+
+
+
+
+
+  html, body {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+
+img, svg, input, button {
+  max-width: 100%;
+}
+
+.layout-wrapper,
+.main-content,
+.header-geral,
+.container-img-header,
+.consultas-geral,
+.dashboard-layout,
+.coluna-esquerda,
+.coluna-direita,
+.container-consultas,
+.card-consultas,
+.card-consultas-container,
+.card-consultas-text,
+.barra-pesquisa,
+.linha-inferior,
+.card {
+  min-width: 0;
+}
 }

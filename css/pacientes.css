@@ -89,7 +89,7 @@
   margin-top: 2px;
 }
 
-.paciente-staus {
+.paciente-status {
   display: flex;
   gap: 6px;
   margin-top: 10px;
@@ -148,7 +148,6 @@
   border-top: 1px solid var(--borda);
 }
 
-
 .comp-legend {
   font-size: 11px;
   color: var(--texto-suave);
@@ -190,17 +189,13 @@
   border-color: var(--verde-claro);
 }
 
-/* RESPONSIVIDADE */
-@media (max-width: 1050px) {
+@media (max-width: 1024px) {
   .dashboard-layout {
     grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 640px) {
-  .sidebar {
-    display: none;
-  }
   .header-geral {
     padding: 14px 16px;
   }
