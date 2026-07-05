@@ -95,9 +95,16 @@
   padding: 8px 16px;
   cursor: pointer;
 }
-@media (max-width: 600px) {
-  .consultas-geral {
-    padding: 18px 15px 40px;
+@media (max-width: 1024px) {
+  .card-consultas {
+    flex-wrap: wrap;
+    row-gap: 10px;
+  }
+
+  .card-consultas .bt-consultas {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
   }
 
   .card-consultas-container {
@@ -106,6 +113,13 @@
 
   .card-bt-consultas {
     width: 100%;
+    min-width: 0;
     padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .card-consultas-text {
+    min-width: 0;
+    overflow-wrap: break-word;
   }
 }

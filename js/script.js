@@ -50,12 +50,34 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
+document.addEventListener('DOMContentLoaded', () => {
+  const menuToggle = document.getElementById('menuToggle');
+  const sidebar = document.querySelector('.sidebar');
 
-const menuToggle = document.getElementById('menuToggle');
-const sidebar = document.getElementById('sidebar');
-
-if (menuToggle && sidebar) {
-    menuToggle.addEventListener('click', function() {
-        sidebar.classList.toggle('menu-aberto');
+  if (menuToggle && sidebar) {
+    menuToggle.addEventListener('click', () => {
+      sidebar.classList.toggle('menu-aberto');
     });
-}
+  }
+
+  const fotoInput = document.getElementById('fotoPerfilInput');
+  const fotoPreview = document.getElementById('fotoPerfilPreview');
+
+  if (fotoInput && fotoPreview) {
+    fotoInput.addEventListener('change', (e) => {
+      const file = e.target.files[0];
+      if (!file) return;
+
+      if (!file.type.startsWith('image/')) {
+        alert('Selecione um arquivo de imagem válido.');
+        return;
+      }
+
+      const reader = new FileReader();
+      reader.onload = (ev) => {
+        fotoPreview.src = ev.target.result;
+      };
+      reader.readAsDataURL(file);
+    });
+  }
+});
