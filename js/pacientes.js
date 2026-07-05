@@ -299,7 +299,6 @@ document.addEventListener('DOMContentLoaded', () => {
     alert('Aqui você redirecionaria para a tela de Cadastro de Pacientes.');
   });
 
-  /* ---------- INIT ---------- */
   renderResumo();
   renderPacientes();
 });
