@@ -23,6 +23,11 @@
   flex-shrink: 0;
 }
 
+.icon-lupa {
+  height: 22px;
+  width: 22px;
+}
+
 .foto-perfil-label {
   display: block;
   width: clamp(38px, 3vw, 48px);
