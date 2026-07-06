@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nutri Boost - Ajuda</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="icon" href="./img/nutrition.png">
+
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/menu.css">
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/consultas.css">
+  <link rel="stylesheet" href="./css/ajuda.css">
+</head>
+<body>
+
+  <div class="layout-wrapper">
+    <aside class="sidebar">
+      <div class="menu-hamburguer" id="menuToggle">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+        <span>Menu</span>
+      </div>
+
+      <div class="logo-container">
+        <img src="./img/logo-nutri-boost.png" alt="Logo da Nutri Boost" class="menu-logo" width="280" height="80">
+      </div>
+
+      <nav class="menu-principal">
+        <a href="index.html" class="menu-align">
+          <img src="./img/icon-home.svg" alt="icone de home" class="menu-icon">
+          <p>Dashboard</p>
+        </a>
+        <a href="pacientes.html" class="menu-align">
+          <img src="./img/icon-user.png" alt="icone de pacientes" class="menu-icon">
+          <p>Pacientes</p>
+          <span class="menu-badge">120</span>
+        </a>
+        <a href="relatorios.html" class="menu-align">
+          <img src="./img/icon-relatorio.png" alt="icone de relatorios" class="menu-icon">
+          <p>Relatórios</p>
+        </a>
+        <a href="configuracoes.html" class="menu-align">
+          <img src="./img/icon-configuration.png" alt="icone de configuracao" class="menu-icon">
+          <p>Configurações</p>
+        </a>
+      </nav>
+
+      <hr class="divisor-menu">
+
+      <div class="menu-align-bottom">
+        <a href="ajuda.html" class="menu-align menu-active"><img src="./img/icon-help.png" alt="icone de ajuda" class="menu-icon"><p class="text-menu">Ajuda</p></a>
+        <a href="#" class="menu-align"><img src="./img/icon-support.png" alt="icone de suporte" class="menu-icon"><p class="text-menu">Suporte</p></a>
+        <a href="login.html" class="menu-align"><img src="./img/icon-logout.png" alt="icone de saida" class="menu-icon"><p class="text-menu">Sair</p></a>
+      </div>
+    </aside>
+
+    <div class="main-content">
+      <header class="header-geral">
+        <div class="foto-perfil-wrapper">
+          <label for="fotoPerfilInput" class="foto-perfil-label" title="Clique para alterar a foto">
+            <img src="./img/foto-nutricionista.png" alt="foto de uma nutricionista" class="img-perfil" id="fotoPerfilPreview">
+          </label>
+          <input type="file" id="fotoPerfilInput" accept="image/*" hidden>
+        </div>
+
+        <form role="search" class="barra-pesquisa" onsubmit="return false;">
+          <img src="./img/icon-lupa.png" alt="icone de lupa" class="icon-lupa">
+          <input type="search" placeholder="Buscar pacientes, dietas, relatórios..." aria-label="Buscar">
+        </form>
+
+        <div class="container-img-header">
+          <img src="./img/bell.png" alt="ícone de notificacoes" class="img-notification" width="40" height="40">
+          <p class="header-text">Dra. Júlia Macedo</p>
+          <a href="configuracoes.html"><img src="./img/icon-configuration.png" alt="icone de configuracao" class="img-configuration"></a>
+        </div>
+      </header>
+
+      <section class="ajuda-page">
+
+        <div class="ajuda-page-header">
+          <p class="consultas-title">Ajuda</p>
+          <p class="consultas-sub">Objetivo do sistema, guia de uso e perguntas frequentes.</p>
+        </div>
+
+        <!-- OBJETIVO DO SISTEMA -->
+        <div class="ajuda-card">
+          <p class="card-title">Sobre o Nutri Boost</p>
+          <p class="ajuda-texto">
+            O Nutri Boost centraliza o acompanhamento de pacientes de nutrição em um só lugar:
+            cadastro, plano alimentar, evolução de peso e composição corporal, observações clínicas,
+            relatórios e controle de retorno. O objetivo é reduzir o tempo gasto com planilhas e
+            arquivos soltos, mantendo o histórico de cada paciente organizado e acessível a qualquer momento.
+          </p>
+        </div>
+
+        <!-- COMO USAR -->
+        <div class="ajuda-card">
+          <p class="card-title">Como usar o sistema</p>
+
+          <div class="guia-lista">
+            <div class="guia-item">
+              <span class="guia-numero">01</span>
+              <div>
+                <p class="guia-titulo">Dashboard</p>
+                <p class="guia-texto">Visão geral do dia: próximas consultas, lembretes, atendimentos da semana e resumo de pacientes.</p>
+              </div>
+            </div>
+            <div class="guia-item">
+              <span class="guia-numero">02</span>
+              <div>
+                <p class="guia-titulo">Pacientes</p>
+                <p class="guia-texto">Cadastre, busque e filtre pacientes por status de retorno. Cada ficha reúne plano alimentar, evolução de peso, observações e relatórios.</p>
+              </div>
+            </div>
+            <div class="guia-item">
+              <span class="guia-numero">03</span>
+              <div>
+                <p class="guia-titulo">Relatórios</p>
+                <p class="guia-texto">Gere relatórios de evolução, avaliação antropométrica ou plano alimentar por período, e acompanhe o que está pendente.</p>
+              </div>
+            </div>
+            <div class="guia-item">
+              <span class="guia-numero">04</span>
+              <div>
+                <p class="guia-titulo">Configurações</p>
+                <p class="guia-texto">Atualize seus dados de perfil, preferências de notificação, senha e informações da clínica.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PERGUNTAS FREQUENTES -->
+        <div class="ajuda-card">
+          <p class="card-title">Perguntas Frequentes</p>
+
+          <div class="faq-lista">
+            <details class="faq-item" open>
+              <summary>Como eu altero o status de retorno de um paciente?</summary>
+              <div class="faq-resposta">
+                Na página de Pacientes, abra a ficha do paciente e localize o campo de status
+                (Ativo, Em Acompanhamento, Aguardando Retorno ou Inativo). A alteração é refletida
+                imediatamente nos filtros e no resumo do Dashboard.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>Onde ficam os relatórios gerados anteriormente?</summary>
+              <div class="faq-resposta">
+                Todos os relatórios ficam listados na página de Relatórios, com filtro por paciente,
+                tipo e status. Use o botão "Baixar" para obter o arquivo novamente a qualquer momento.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>É possível trocar a foto de perfil?</summary>
+              <div class="faq-resposta">
+                Sim. Clique diretamente na foto de perfil, no canto superior do sistema, para selecionar
+                uma nova imagem do seu dispositivo (computador, tablet ou celular).
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>Como funciona o acompanhamento de composição corporal?</summary>
+              <div class="faq-resposta">
+                Cada paciente possui um indicador de percentual de gordura e massa magra, junto com o
+                histórico de peso ao longo dos meses, disponível na aba "Evolução de Peso" da ficha do paciente.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>Esqueci minha senha, o que eu faço?</summary>
+              <div class="faq-resposta">
+                Acesse Configurações → Segurança para redefinir sua senha informando a senha atual.
+                Caso não lembre da senha atual, entre em contato com o suporte pelo canal abaixo.
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- CONTATO -->
+        <div class="ajuda-card ajuda-contato">
+          <div>
+            <p class="card-title">Não encontrou o que precisava?</p>
+            <p class="config-card-sub" style="margin-bottom:0;">Fale com o suporte do Nutri Boost e retornamos em até 1 dia útil.</p>
+          </div>
+          <a href="#" class="btn-primario">Falar com o Suporte</a>
+        </div>
+
+      </section>
+    </div>
+  </div>
+
+  <script src="./js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nutri Boost - Configurações</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="icon" href="./img/nutrition.png">
+
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/menu.css">
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/consultas.css">
+  <link rel="stylesheet" href="./css/configuracoes.css">
+</head>
+<body>
+
+  <div class="layout-wrapper">
+    <aside class="sidebar">
+      <div class="menu-hamburguer" id="menuToggle">
+        <img src="./img/menu-hamburguer-cinza.png" alt="icone de hamburguer" class="option-hamburguer">
+        <span>Menu</span>
+      </div>
+
+      <div class="logo-container">
+        <img src="./img/logo-nutri-boost.png" alt="Logo da Nutri Boost" class="menu-logo" width="280" height="80">
+      </div>
+
+      <nav class="menu-principal">
+        <a href="index.html" class="menu-align">
+          <img src="./img/icon-home-cinza.png" alt="icone de home" class="menu-icon">
+          <p>Dashboard</p>
+        </a>
+        <a href="pacientes.html" class="menu-align">
+          <img src="./img/icon-users-cinza.png" alt="icone de pacientes" class="menu-icon">
+          <p>Pacientes</p>
+          <span class="menu-badge">120</span>
+        </a>
+        <a href="relatorios.html" class="menu-align">
+          <img src="./img/icon-relatorio-cinza.png" alt="icone de relatorios" class="menu-icon">
+          <p>Relatórios</p>
+        </a>
+        <a href="configuracoes.html" class="menu-align menu-active">
+          <img src="./img/icon-configuration-cinza.png" alt="icone de configuracao" class="menu-icon">
+          <p>Configurações</p>
+        </a>
+      </nav>
+
+      <hr class="divisor-menu">
+
+      <div class="menu-align-bottom">
+        <a href="ajuda.html" class="menu-align"><img src="./img/icon-help.png" alt="icone de ajuda" class="menu-icon"><p class="text-menu">Ajuda</p></a>
+        <a href="#" class="menu-align"><img src="./img/icon-support.png" alt="icone de suporte" class="menu-icon"><p class="text-menu">Suporte</p></a>
+        <a href="#" class="menu-align"><img src="./img/icon-logout.png" alt="icone de saida" class="menu-icon"><p class="text-menu">Sair</p></a>
+      </div>
+    </aside>
+
+    <div class="main-content">
+      <header class="header-geral">
+        <div class="foto-perfil-wrapper">
+          <label for="fotoPerfilInput" class="foto-perfil-label" title="Clique para alterar a foto">
+            <img src="./img/foto-nutricionista.png" alt="foto de uma nutricionista" class="img-perfil" id="fotoPerfilPreview">
+          </label>
+          <input type="file" id="fotoPerfilInput" accept="image/*" hidden>
+        </div>
+
+        <form role="search" class="barra-pesquisa" onsubmit="return false;">
+          <img src="./img/icon-lupa.png" alt="icone de lupa" class="icon-lupa">
+          <input type="search" placeholder="Buscar pacientes, dietas, relatórios..." aria-label="Buscar">
+        </form>
+
+        <div class="container-img-header">
+          <img src="./img/bell.png" alt="ícone de notificacoes" class="img-notification" width="40" height="40">
+          <p class="header-text">Dra. Júlia Macedo</p>
+          <img src="./img/icon-configuration.png" alt="icone de configuracao" class="img-configuration">
+        </div>
+      </header>
+
+      <section class="config-page">
+
+        <div class="config-page-header">
+          <p class="consultas-title">Configurações</p>
+          <p class="consultas-sub">Gerencie seus dados, preferências e segurança da conta.</p>
+        </div>
+
+        <div class="config-layout">
+
+          <nav class="config-nav">
+            <a href="#perfil" class="config-nav-item config-nav-ativo">Perfil</a>
+            <a href="#notificacoes" class="config-nav-item">Notificações</a>
+            <a href="#seguranca" class="config-nav-item">Segurança</a>
+            <a href="#clinica" class="config-nav-item">Clínica</a>
+          </nav>
+
+          <div class="config-conteudo">
+
+            <!-- PERFIL -->
+            <div class="config-card" id="perfil">
+              <p class="card-title">Perfil</p>
+              <p class="config-card-sub">Informações exibidas no cabeçalho e nos relatórios gerados.</p>
+
+              <form class="config-form" id="formPerfil">
+                <div class="campo">
+                  <label for="perfilNome">Nome completo</label>
+                  <input type="text" id="perfilNome" value="Júlia Macedo">
+                </div>
+                <div class="campo">
+                  <label for="perfilCrn">Registro profissional (CRN)</label>
+                  <input type="text" id="perfilCrn" value="CRN-3 12345">
+                </div>
+                <div class="campo">
+                  <label for="perfilEmail">E-mail</label>
+                  <input type="email" id="perfilEmail" value="julia.macedo@nutriboost.com">
+                </div>
+                <div class="campo">
+                  <label for="perfilTelefone">Telefone</label>
+                  <input type="tel" id="perfilTelefone" value="(44) 99999-0000">
+                </div>
+                <div class="campo campo-full">
+                  <label for="perfilEspecialidade">Especialidade</label>
+                  <input type="text" id="perfilEspecialidade" value="Nutrição Clínica e Esportiva">
+                </div>
+                <div class="campo-botao">
+                  <button type="submit" class="btn-primario">Salvar Alterações</button>
+                </div>
+              </form>
+            </div>
+
+            <!-- NOTIFICAÇÕES -->
+            <div class="config-card" id="notificacoes">
+              <p class="card-title">Notificações</p>
+              <p class="config-card-sub">Escolha o que você quer ser avisada dentro do sistema.</p>
+
+              <div class="config-toggle-list">
+                <div class="config-toggle-item">
+                  <div>
+                    <p class="toggle-titulo">Lembretes de consulta</p>
+                    <p class="toggle-sub">Avisos sobre consultas agendadas para o dia.</p>
+                  </div>
+                  <label class="switch">
+                    <input type="checkbox" checked>
+                    <span class="slider"></span>
+                  </label>
+                </div>
+                <div class="config-toggle-item">
+                  <div>
+                    <p class="toggle-titulo">Retornos pendentes</p>
+                    <p class="toggle-sub">Pacientes com status "Aguardando Retorno".</p>
+                  </div>
+                  <label class="switch">
+                    <input type="checkbox" checked>
+                    <span class="slider"></span>
+                  </label>
+                </div>
+                <div class="config-toggle-item">
+                  <div>
+                    <p class="toggle-titulo">Relatórios prontos</p>
+                    <p class="toggle-sub">Quando um relatório gerado for concluído.</p>
+                  </div>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                  </label>
+                </div>
+                <div class="config-toggle-item">
+                  <div>
+                    <p class="toggle-titulo">Novidades do sistema</p>
+                    <p class="toggle-sub">Atualizações e novos recursos do Nutri Boost.</p>
+                  </div>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <!-- SEGURANÇA -->
+            <div class="config-card" id="seguranca">
+              <p class="card-title">Segurança</p>
+              <p class="config-card-sub">Altere sua senha de acesso periodicamente.</p>
+
+              <form class="config-form" id="formSenha">
+                <div class="campo campo-full">
+                  <label for="senhaAtual">Senha atual</label>
+                  <input type="password" id="senhaAtual" required>
+                </div>
+                <div class="campo">
+                  <label for="senhaNova">Nova senha</label>
+                  <input type="password" id="senhaNova" required minlength="8">
+                </div>
+                <div class="campo">
+                  <label for="senhaConfirmar">Confirmar nova senha</label>
+                  <input type="password" id="senhaConfirmar" required minlength="8">
+                </div>
+                <div class="campo-botao">
+                  <button type="submit" class="btn-primario">Atualizar Senha</button>
+                </div>
+              </form>
+            </div>
+
+            <!-- CLÍNICA -->
+            <div class="config-card" id="clinica">
+              <p class="card-title">Clínica</p>
+              <p class="config-card-sub">Dados usados no cabeçalho dos relatórios em PDF.</p>
+
+              <form class="config-form" id="formClinica">
+                <div class="campo campo-full">
+                  <label for="clinicaNome">Nome da clínica</label>
+                  <input type="text" id="clinicaNome" value="Clínica Nutri Boost">
+                </div>
+                <div class="campo">
+                  <label for="clinicaHorario">Horário de atendimento</label>
+                  <input type="text" id="clinicaHorario" value="Seg. a Sex., 08h às 18h">
+                </div>
+                <div class="campo">
+                  <label for="clinicaFuso">Fuso horário</label>
+                  <select id="clinicaFuso">
+                    <option selected>América/São Paulo (GMT-3)</option>
+                    <option>América/Manaus (GMT-4)</option>
+                    <option>América/Noronha (GMT-2)</option>
+                  </select>
+                </div>
+                <div class="campo-botao">
+                  <button type="submit" class="btn-primario">Salvar</button>
+                </div>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="./js/script.js"></script>
+  <script src="./js/configuracoes.js"></script>
+</body>
+</html>
