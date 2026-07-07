@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 const pool = require('../db');
 
-// GET /pacientes/:id/dieta -> todas as refeições do plano alimentar do paciente
 router.get('/:id/dieta', async (req, res) => {
   const { id } = req.params;
 

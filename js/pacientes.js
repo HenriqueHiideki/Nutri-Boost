@@ -12,7 +12,7 @@ function fetchAutenticado(url, opcoes = {}) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  const API_URL = "http://localhost:3000";
+  const API_URL = "https://nutri-boost.onrender.com";
 
   const statusInfo = {
     ativo: { label: "Ativo", classe: "status-ativo", cor: "#3f7d52" },

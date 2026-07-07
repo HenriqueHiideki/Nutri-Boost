@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const API_URL = "http://localhost:3000";
+  const API_URL = "https://nutri-boost.onrender.com";
 
   const form = document.getElementById("formCadastro");
   const erroEl = document.getElementById("cadastroErro");
