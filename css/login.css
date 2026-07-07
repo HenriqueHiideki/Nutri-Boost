@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -20,7 +21,7 @@ body {
   gap: 20px;
   padding: 20px;
   box-sizing: border-box;
-} 
+}
 
 .login-container {
   border-radius: 30px;
@@ -62,7 +63,7 @@ body {
 
 .login-input {
   height: 40px;
-  width: 100%; 
+  width: 100%;
   border-radius: 10px;
   border: 1px solid var(--quarternary-bg-color);
   background-color: var(--primary-bg-color);
@@ -108,7 +109,6 @@ body {
   display: none;
 }
 
-
 @media screen and (min-width: 1024px) {
   .login-geral {
     position: relative;
@@ -129,10 +129,10 @@ body {
     left: 0;
     width: 65%;
     height: 100%;
-    background-image: 
+    background-image:
       linear-gradient(to right, rgba(240, 245, 242, 0) 50%, #f0f5f2 100%),
-      url('../img/bg-nutrition.jpg');
-    
+      url("../img/bg-nutrition.jpg");
+
     background-size: cover;
     background-position: left center;
     z-index: 1;
@@ -173,17 +173,25 @@ body {
     margin: 0 auto;
   }
 
-  .login-input{
+  .login-input {
     height: 50px;
     font-size: 20px;
   }
 
-  .login-bt{
+  .login-bt {
     height: 50px;
     font-size: 20px;
   }
 
-  .login-text{
+  .login-text {
     font-size: 20px;
+  }
+  .login-erro {
+    color: #d9574f;
+    font-size: 12.5px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: -8px;
+    margin-bottom: 4px;
   }
 }

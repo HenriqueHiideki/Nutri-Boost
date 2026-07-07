@@ -7,9 +7,7 @@
     <title>Nutri Boost - Suporte</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="icon" href="./img/nutrition.png">
 
     <link rel="stylesheet" href="./css/main.css">
@@ -17,6 +15,8 @@
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/consultas.css">
     <link rel="stylesheet" href="./css/suporte.css">
+
+    <script src="./js/auth-guard.js"></script>
 </head>
 
 <body>
@@ -24,30 +24,29 @@
     <div class="layout-wrapper">
         <aside class="sidebar">
             <div class="menu-hamburguer" id="menuToggle">
-                <img src="./img/menu-hamburguer-cinza.png" alt="icone de hamburguer" class="option-hamburguer">
+                <img src="./img/menu-hamburguer-cinza.png" alt="Ícone de hambúrguer" class="option-hamburguer">
                 <span>Menu</span>
             </div>
 
             <div class="logo-container">
-                <img src="./img/logo-nutri-boost.png" alt="Logo da Nutri Boost" class="menu-logo" width="280"
-                    height="80">
+                <img src="./img/logo-nutri-boost.png" alt="Logo da Nutri Boost" class="menu-logo" width="280" height="80">
             </div>
 
             <nav class="menu-principal">
                 <a href="index.html" class="menu-align">
-                    <img src="./img/icon-home.svg" alt="icone de home" class="menu-icon">
+                    <img src="./img/icon-home-cinza.png" alt="Ícone de home" class="menu-icon">
                     <p>Dashboard</p>
                 </a>
                 <a href="pacientes.html" class="menu-align">
-                    <img src="./img/icon-user.png" alt="icone de pacientes" class="menu-icon">
+                    <img src="./img/icon-users-cinza.png" alt="Ícone de pacientes" class="menu-icon">
                     <p>Pacientes</p>
                 </a>
                 <a href="relatorios.html" class="menu-align">
-                    <img src="./img/icon-relatorio.png" alt="icone de relatorios" class="menu-icon">
+                    <img src="./img/icon-relatorio-cinza.png" alt="Ícone de relatórios" class="menu-icon">
                     <p>Relatórios</p>
                 </a>
                 <a href="configuracoes.html" class="menu-align">
-                    <img src="./img/icon-configuration.png" alt="icone de configuracao" class="menu-icon">
+                    <img src="./img/icon-configuration-cinza.png" alt="Ícone de configuração" class="menu-icon">
                     <p>Configurações</p>
                 </a>
             </nav>
@@ -55,16 +54,16 @@
             <hr class="divisor-menu">
 
             <div class="menu-align-bottom">
-                <a href="ajuda.html" class="menu-align"><img src="./img/icon-help.png" alt="icone de ajuda"
-                        class="menu-icon">
+                <a href="ajuda.html" class="menu-align">
+                    <img src="./img/icon-help-cinza.png" alt="Ícone de ajuda" class="menu-icon">
                     <p class="text-menu">Ajuda</p>
                 </a>
-                <a href="suporte.html" class="menu-align menu-active"><img src="./img/icon-support.png"
-                        alt="icone de suporte" class="menu-icon">
+                <a href="suporte.html" class="menu-align menu-active">
+                    <img src="./img/icon-support-cinza.png" alt="Ícone de suporte" class="menu-icon">
                     <p class="text-menu">Suporte</p>
                 </a>
-                <a href="login.html" class="menu-align"><img src="./img/icon-logout.png" alt="icone de saida"
-                        class="menu-icon">
+                <a href="login.html" class="menu-align">
+                    <img src="./img/icon-logout-cinza.png" alt="Ícone de saída" class="menu-icon">
                     <p class="text-menu">Sair</p>
                 </a>
             </div>
@@ -74,21 +73,21 @@
             <header class="header-geral">
                 <div class="foto-perfil-wrapper">
                     <label for="fotoPerfilInput" class="foto-perfil-label" title="Clique para alterar a foto">
-                        <img src="./img/foto-nutricionista.png" alt="foto de uma nutricionista" class="img-perfil"
-                            id="fotoPerfilPreview">
+                        <img src="./img/foto-nutricionista.png" alt="Foto de uma nutricionista" class="img-perfil" id="fotoPerfilPreview">
                     </label>
                     <input type="file" id="fotoPerfilInput" accept="image/*" hidden>
                 </div>
 
                 <form role="search" class="barra-pesquisa" onsubmit="return false;">
-                    <img src="./img/icon-lupa.png" alt="icone de lupa" class="icon-lupa">
+                    <img src="./img/icon-lupa.png" alt="Ícone de lupa" class="icon-lupa">
                     <input type="search" placeholder="Buscar pacientes, dietas, relatórios..." aria-label="Buscar">
                 </form>
 
                 <div class="container-img-header">
                     <p class="header-text">Dra. Júlia Macedo</p>
-                    <a href="configuracoes.html"><img src="./img/icon-configuration.png" alt="icone de configuracao"
-                            class="img-configuration"></a>
+                    <a href="configuracoes.html">
+                        <img src="./img/icon-configuration.png" alt="Ícone de configuração" class="img-configuration">
+                    </a>
                 </div>
             </header>
 
@@ -99,23 +98,21 @@
                     <p class="consultas-sub">Fale com a nossa equipe pelo canal que preferir.</p>
                 </div>
 
-                <!-- CANAIS DE CONTATO -->
                 <div class="canais-grid">
 
                     <div class="canal-card">
                         <div class="canal-icone canal-icone-whatsapp">
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-                                <img src="./img/icon-whatsapp.png" alt="icone do whatsapp" class="option-hamburguer">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"></svg>
+                            <img src="./img/icon-whatsapp.png" alt="Ícone do WhatsApp" class="option-hamburguer">
                         </div>
                         <p class="canal-titulo">WhatsApp</p>
                         <p class="canal-texto">Atendimento rápido, de segunda a sexta, das 8h às 18h.</p>
-                        <a href="https://wa.me/5544988317870" target="_blank" rel="noopener"
-                            class="btn-canal btn-whatsapp">Iniciar conversa</a>
+                        <a href="https://wa.me/5544988317870" target="_blank" rel="noopener" class="btn-canal btn-whatsapp">Iniciar conversa</a>
                     </div>
 
                     <div class="canal-card">
                         <div class="canal-icone canal-icone-email">
-                            <img src="./img/icon-email.png" alt="icone de email" class="option-hamburguer">
+                            <img src="./img/icon-email.png" alt="Ícone de e-mail" class="option-hamburguer">
                         </div>
                         <p class="canal-titulo">E-mail</p>
                         <p class="canal-texto">Resposta em até 1 dia útil. Ideal para dúvidas mais detalhadas.</p>
@@ -124,11 +121,9 @@
 
                 </div>
 
-                <!-- FORMULÁRIO DE CONTATO POR E-MAIL -->
                 <div class="suporte-card" id="formularioContato">
                     <p class="card-title">Enviar mensagem por e-mail</p>
-                    <p class="config-card-sub">Preencha os campos abaixo e o seu aplicativo de e-mail vai abrir com a
-                        mensagem pronta para envio.</p>
+                    <p class="config-card-sub">Preencha os campos abaixo e o seu aplicativo de e-mail vai abrir com a mensagem pronta para envio.</p>
 
                     <form class="suporte-form" id="formSuporte">
                         <div class="campo">
@@ -146,8 +141,7 @@
                         </div>
                         <div class="campo campo-full">
                             <label for="suporteMensagem">Mensagem</label>
-                            <textarea id="suporteMensagem" rows="5" placeholder="Descreva sua dúvida ou problema..."
-                                required></textarea>
+                            <textarea id="suporteMensagem" rows="5" placeholder="Descreva sua dúvida ou problema..." required></textarea>
                         </div>
                         <div class="campo-botao">
                             <button type="submit" class="btn-primario">Abrir E-mail</button>
@@ -155,7 +149,6 @@
                     </form>
                 </div>
 
-                <!-- INFORMAÇÕES DE CONTATO DIRETO -->
                 <div class="suporte-card suporte-info">
                     <div>
                         <p class="info-label">E-mail direto</p>

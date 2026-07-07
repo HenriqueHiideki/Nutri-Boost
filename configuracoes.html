@@ -14,6 +14,8 @@
   <link rel="stylesheet" href="./css/header.css">
   <link rel="stylesheet" href="./css/consultas.css">
   <link rel="stylesheet" href="./css/configuracoes.css">
+
+  <script src="./js/auth-guard.js"></script>
 </head>
 <body>
 
@@ -50,27 +52,26 @@
       <hr class="divisor-menu">
 
       <div class="menu-align-bottom">
-        <a href="ajuda.html" class="menu-align"><img src="./img/icon-help.png" alt="icone de ajuda" class="menu-icon"><p class="text-menu">Ajuda</p></a>
-        <a href="#" class="menu-align"><img src="./img/icon-support.png" alt="icone de suporte" class="menu-icon"><p class="text-menu">Suporte</p></a>
-        <a href="login.html" class="menu-align"><img src="./img/icon-logout.png" alt="icone de saida" class="menu-icon"><p class="text-menu">Sair</p></a>
+        <a href="ajuda.html" class="menu-align"><img src="./img/icon-help-cinza.png" alt="icone de ajuda" class="menu-icon"><p class="text-menu">Ajuda</p></a>
+        <a href="suporte.html" class="menu-align"><img src="./img/icon-support-cinza.png" alt="icone de suporte" class="menu-icon"><p class="text-menu">Suporte</p></a>
+        <a href="login.html" class="menu-align"><img src="./img/icon-logout-cinza.png" alt="icone de saida" class="menu-icon"><p class="text-menu">Sair</p></a>
       </div>
     </aside>
 
     <div class="main-content">
       <header class="header-geral">
-        <div class="foto-perfil-wrapper">
-          <label for="fotoPerfilInput" class="foto-perfil-label" title="Clique para alterar a foto">
-            <img src="./img/foto-nutricionista.png" alt="foto de uma nutricionista" class="img-perfil" id="fotoPerfilPreview">
-          </label>
-          <input type="file" id="fotoPerfilInput" accept="image/*" hidden>
-        </div>
-
-        <form role="search" class="barra-pesquisa" onsubmit="return false;">
+        <form role="search" class="barra-pesquisa">
           <img src="./img/icon-lupa.png" alt="icone de lupa" class="icon-lupa">
-          <input type="search" placeholder="Buscar pacientes, dietas, relatórios..." aria-label="Buscar">
+          <input type="search" placeholder="Buscar pacientes, dietas, relatórios..." aria-label="Buscar" class="header-text">
         </form>
 
         <div class="container-img-header">
+          <div class="foto-perfil-wrapper">
+            <label for="fotoPerfilInput" class="foto-perfil-label" title="Clique para alterar a foto">
+              <img src="./img/foto-nutricionista.png" alt="foto de uma nutricionista" class="img-perfil" id="fotoPerfilPreview">
+            </label>
+            <input type="file" id="fotoPerfilInput" accept="image/*" hidden>
+          </div>
           <p class="header-text">Dra. Júlia Macedo</p>
           <a href="configuracoes.html"><img src="./img/icon-configuration.png" alt="icone de configuracao" class="img-configuration"></a>
         </div>
@@ -94,7 +95,6 @@
 
           <div class="config-conteudo">
 
-            <!-- PERFIL -->
             <div class="config-card" id="perfil">
               <p class="card-title">Perfil</p>
               <p class="config-card-sub">Informações exibidas no cabeçalho e nos relatórios gerados.</p>
@@ -126,7 +126,6 @@
               </form>
             </div>
 
-            <!-- NOTIFICAÇÕES -->
             <div class="config-card" id="notificacoes">
               <p class="card-title">Notificações</p>
               <p class="config-card-sub">Escolha o que você quer ser avisada dentro do sistema.</p>
@@ -175,7 +174,6 @@
               </div>
             </div>
 
-            <!-- SEGURANÇA -->
             <div class="config-card" id="seguranca">
               <p class="card-title">Segurança</p>
               <p class="config-card-sub">Altere sua senha de acesso periodicamente.</p>
@@ -183,15 +181,15 @@
               <form class="config-form" id="formSenha">
                 <div class="campo campo-full">
                   <label for="senhaAtual">Senha atual</label>
-                  <input type="password" id="senhaAtual" required>
+                  <input type="password" id="senhaAtual" autocomplete="current-password" required>
                 </div>
                 <div class="campo">
                   <label for="senhaNova">Nova senha</label>
-                  <input type="password" id="senhaNova" required minlength="8">
+                  <input type="password" id="senhaNova" autocomplete="new-password" required minlength="8">
                 </div>
                 <div class="campo">
                   <label for="senhaConfirmar">Confirmar nova senha</label>
-                  <input type="password" id="senhaConfirmar" required minlength="8">
+                  <input type="password" id="senhaConfirmar" autocomplete="new-password" required minlength="8">
                 </div>
                 <div class="campo-botao">
                   <button type="submit" class="btn-primario">Atualizar Senha</button>
@@ -199,7 +197,6 @@
               </form>
             </div>
 
-            <!-- CLÍNICA -->
             <div class="config-card" id="clinica">
               <p class="card-title">Clínica</p>
               <p class="config-card-sub">Dados usados no cabeçalho dos relatórios em PDF.</p>

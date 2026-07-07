@@ -6,7 +6,6 @@
   margin-bottom: 22px;
 }
 
-/* Cards de canal (WhatsApp / E-mail) */
 .canais-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -84,8 +83,6 @@
 .btn-email:hover {
   opacity: 0.9;
 }
-
-/* Card genérico reaproveitado (mesmo padrão de configuracoes.css) */
 .suporte-card {
   background: var(--primary-bg-color);
   border-radius: 16px;
@@ -168,7 +165,6 @@
   opacity: 0.9;
 }
 
-/* Informações de contato direto */
 .suporte-info {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -191,7 +187,6 @@
   margin-top: 4px;
 }
 
-/* Responsivo */
 @media (max-width: 1024px) {
   .canais-grid {
     grid-template-columns: 1fr;

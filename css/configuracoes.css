@@ -13,7 +13,6 @@
   align-items: start;
 }
 
-/* Nav lateral das seções */
 .config-nav {
   display: flex;
   flex-direction: column;
@@ -45,7 +44,6 @@
   color: var(--verde-escuro);
 }
 
-/* Conteúdo */
 .config-conteudo {
   display: flex;
   flex-direction: column;
@@ -67,7 +65,6 @@
   margin-bottom: 18px;
 }
 
-/* Formulários */
 .config-form {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -132,7 +129,6 @@
   opacity: 0.9;
 }
 
-/* Lista de notificações com toggle */
 .config-toggle-list {
   display: flex;
   flex-direction: column;
@@ -162,7 +158,6 @@
   margin-top: 2px;
 }
 
-/* Switch (CSS puro) */
 .switch {
   position: relative;
   display: inline-block;
@@ -206,7 +201,6 @@
   transform: translateX(18px);
 }
 
-/* Toast de confirmação simples */
 .config-toast {
   position: fixed;
   bottom: 24px;
@@ -230,7 +224,6 @@
   transform: translateY(0);
 }
 
-/* Responsivo */
 @media (max-width: 1024px) {
   .config-layout {
     grid-template-columns: 1fr;
