@@ -2,7 +2,7 @@
 
 Sistema web de gerenciamento de pacientes para nutricionistas, desenvolvido como projeto de estudo e portfólio, cobrindo o ciclo completo de desenvolvimento full stack: front-end, back-end, banco de dados e deploy em produção.
 
-**🔗 Aplicação no ar:** [https://nutriboost.netlify.app](https://nutritionboost.netlify.app)
+**🔗 Aplicação no ar:** [https://nutritionboost.netlify.app](https://nutritionboost.netlify.app)
 **🔗 API:** [https://nutri-boost.onrender.com](https://nutri-boost.onrender.com)
 
 > ⚠️ Este projeto foi construído para fins de aprendizado e portfólio, não para uso profissional real. Os dados exibidos são fictícios.
