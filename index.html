@@ -7,9 +7,7 @@
     <title>Nutri Boost - Sistema para Nutricionistas</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="icon" href="./img/nutrition.png">
 
     <link rel="stylesheet" href="./css/main.css">
@@ -20,6 +18,8 @@
     <link rel="stylesheet" href="./css/dashboard.css">
     <link rel="stylesheet" href="./css/action.css">
     <link rel="stylesheet" href="./css/pacientes.css">
+
+    <script src="./js/auth-guard.js"></script>
 </head>
 
 <body>
@@ -32,8 +32,7 @@
             </div>
 
             <div class="logo-container">
-                <img src="./img/logo-nutri-boost.png" alt="Logo da Nutri Boost" class="menu-logo" width="280"
-                    height="80">
+                <img src="./img/logo-nutri-boost.png" alt="Logo da Nutri Boost" class="menu-logo" width="280" height="80">
             </div>
 
             <nav class="menu-principal">
@@ -59,15 +58,15 @@
 
             <div class="menu-align-bottom">
                 <a href="ajuda.html" class="menu-align">
-                    <img src="./img/icon-help.png" alt="icone de ajuda" class="menu-icon" width="40" height="40">
+                    <img src="./img/icon-help-cinza.png" alt="icone de ajuda" class="menu-icon" width="40" height="40">
                     <p class="text-menu">Ajuda</p>
                 </a>
-                <a href="#" class="menu-align">
-                    <img src="./img/icon-support.png" alt="icone de suporte" class="menu-icon" width="40" height="40">
+                <a href="suporte.html" class="menu-align">
+                    <img src="./img/icon-support-cinza.png" alt="icone de suporte" class="menu-icon" width="40" height="40">
                     <p class="text-menu">Suporte</p>
                 </a>
                 <a href="login.html" class="menu-align">
-                    <img src="./img/icon-logout.png" alt="icone de saida" class="menu-icon" width="40" height="40">
+                    <img src="./img/icon-logout-cinza.png" alt="icone de saida" class="menu-icon" width="40" height="40">
                     <p class="text-menu">Sair</p>
                 </a>
             </div>
@@ -77,15 +76,13 @@
             <header class="header-geral">
                 <form role="search" class="barra-pesquisa">
                     <img src="./img/icon-lupa.png" alt="icone de lupa" class="icon-lupa">
-                    <input type="search" placeholder="Buscar pacientes, dietas, relatórios..." aria-label="Buscar"
-                        class="header-text">
+                    <input type="search" placeholder="Buscar pacientes, dietas, relatórios..." aria-label="Buscar" class="header-text">
                 </form>
 
                 <div class="container-img-header">
                     <div class="foto-perfil-wrapper">
                         <label for="fotoPerfilInput" class="foto-perfil-label" title="Clique para alterar a foto">
-                            <img src="./img/foto-nutricionista.png" alt="foto de uma nutricionista" class="img-perfil"
-                                id="fotoPerfilPreview">
+                            <img src="./img/foto-nutricionista.png" alt="foto de uma nutricionista" class="img-perfil" id="fotoPerfilPreview">
                         </label>
                         <input type="file" id="fotoPerfilInput" accept="image/*" hidden>
                     </div>
@@ -112,22 +109,19 @@
                                 <button type="button" class="bt-consultas">Ver consultas</button>
                             </div>
                             <div class="card-consultas-container">
-                                <img src="./img/paciente1.png" alt="imagem ilustrativa de um paciente"
-                                    class="card-consultas-img" width="80" height="80">
+                                <img src="./img/paciente1.png" alt="imagem ilustrativa de um paciente" class="card-consultas-img" width="80" height="80">
                                 <p class="card-consultas-text">Amanda Nunes <span>- 15:00</span></p>
                                 <button type="button" class="card-bt-consultas">Detalhes</button>
                             </div>
 
                             <div class="card-consultas-container">
-                                <img src="./img/paciente2.png" alt="imagem ilustrativa de um paciente"
-                                    class="card-consultas-img" width="80" height="80">
+                                <img src="./img/paciente2.png" alt="imagem ilustrativa de um paciente" class="card-consultas-img" width="80" height="80">
                                 <p class="card-consultas-text">Letícia Soares <span>- 17:00</span></p>
                                 <button type="button" class="card-bt-consultas">Detalhes</button>
                             </div>
 
                             <div class="card-consultas-container">
-                                <img src="./img/paciente3.png" alt="imagem ilustrativa de um paciente"
-                                    class="card-consultas-img" width="80" height="80">
+                                <img src="./img/paciente3.png" alt="imagem ilustrativa de um paciente" class="card-consultas-img" width="80" height="80">
                                 <p class="card-consultas-text">Maria Eduarda <span>- 18:00</span></p>
                                 <button type="button" class="card-bt-consultas">Detalhes</button>
                             </div>
@@ -200,6 +194,7 @@
                             <div class="resumo-align">
                                 <div>
                                     <p class="resumo-text">Total de Pacientes</p>
+                                    <p class="resumo-number">120</p>
                                 </div>
                                 <div>
                                     <p class="resumo-text">Novos Este Mês</p>
@@ -229,7 +224,7 @@
                                     <button class="filtro-btn">Aguardando</button>
                                     <button class="filtro-btn">Inativo</button>
                                 </div>
-                                <button class="btn-novo-paciente" src="cadastro.html"> Novo Paciente</button>
+                                <a href="cadastro.html" class="btn-novo-paciente" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center;">Novo Paciente</a>
                             </div>
                         </div>
 
@@ -250,11 +245,8 @@
                                 <div class="composicao-mini">
                                     <div style="--pct-gordura:24%"></div>
                                     <div class="comp-legend">
-                                        <span><span class="dot-legend" style="background:var(--laranja)"></span>Gordura:
-                                            24%</span>
-                                        <span><span class="dot-legend" style="background:var(--azul-obj)"></span>Massa
-                                            magra:
-                                            76%</span>
+                                        <span><span class="dot-legend" style="background:var(--laranja)"></span>Gordura: 24%</span>
+                                        <span><span class="dot-legend" style="background:var(--azul-obj)"></span>Massa magra: 76%</span>
                                     </div>
                                 </div>
                                 <div class="paciente-card-actions">
@@ -279,11 +271,8 @@
                                 <div class="composicao-mini">
                                     <div style="--pct-gordura:20%"></div>
                                     <div class="comp-legend">
-                                        <span><span class="dot-legend" style="background:var(--laranja)"></span>Gordura:
-                                            20%</span>
-                                        <span><span class="dot-legend" style="background:var(--azul-obj)"></span>Massa
-                                            magra:
-                                            80%</span>
+                                        <span><span class="dot-legend" style="background:var(--laranja)"></span>Gordura: 20%</span>
+                                        <span><span class="dot-legend" style="background:var(--azul-obj)"></span>Massa magra: 80%</span>
                                     </div>
                                 </div>
                                 <div class="paciente-card-actions">
@@ -308,11 +297,8 @@
                                 <div class="composicao-mini">
                                     <div style="--pct-gordura:22%"></div>
                                     <div class="comp-legend">
-                                        <span><span class="dot-legend" style="background:var(--laranja)"></span>Gordura:
-                                            22%</span>
-                                        <span><span class="dot-legend" style="background:var(--azul-obj)"></span>Massa
-                                            magra:
-                                            78%</span>
+                                        <span><span class="dot-legend" style="background:var(--laranja)"></span>Gordura: 22%</span>
+                                        <span><span class="dot-legend" style="background:var(--azul-obj)"></span>Massa magra: 78%</span>
                                     </div>
                                 </div>
                                 <div class="paciente-card-actions">
@@ -337,11 +323,8 @@
                                 <div class="composicao-mini">
                                     <div style="--pct-gordura:29%"></div>
                                     <div class="comp-legend">
-                                        <span><span class="dot-legend" style="background:var(--laranja)"></span>Gordura:
-                                            29%</span>
-                                        <span><span class="dot-legend" style="background:var(--azul-obj)"></span>Massa
-                                            magra:
-                                            71%</span>
+                                        <span><span class="dot-legend" style="background:var(--laranja)"></span>Gordura: 29%</span>
+                                        <span><span class="dot-legend" style="background:var(--azul-obj)"></span>Massa magra: 71%</span>
                                     </div>
                                 </div>
                                 <div class="paciente-card-actions">
@@ -359,8 +342,6 @@
         </div>
     </div>
 
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="./js/script.js"></script>
 </body>
 

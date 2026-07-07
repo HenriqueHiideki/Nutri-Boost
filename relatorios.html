@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -7,9 +7,7 @@
     <title>Nutri Boost - Relatórios</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="icon" href="./img/nutrition.png">
 
     <link rel="stylesheet" href="./css/main.css">
@@ -18,6 +16,8 @@
     <link rel="stylesheet" href="./css/consultas.css">
     <link rel="stylesheet" href="./css/resumo.css">
     <link rel="stylesheet" href="./css/relatorios.css">
+
+    <script src="./js/auth-guard.js"></script>
 </head>
 
 <body>
@@ -25,45 +25,44 @@
     <div class="layout-wrapper">
         <aside class="sidebar">
             <div class="menu-hamburguer" id="menuToggle">
-                <img src="./img/menu-hamburguer.png" alt="menu hamburguer" class="option-hamburguer">
+                <img src="./img/menu-hamburguer.png" alt="Menu hambúrguer" class="option-hamburguer">
                 <span>Menu</span>
             </div>
 
             <div class="logo-container">
-                <img src="./img/logo-nutri-boost.png" alt="Logo da Nutri Boost" class="menu-logo" width="280"
-                    height="80">
+                <img src="./img/logo-nutri-boost.png" alt="Logo da Nutri Boost" class="menu-logo" width="280" height="80">
             </div>
 
             <nav class="menu-principal">
                 <a href="index.html" class="menu-align">
-                    <img src="./img/icon-home-cinza.png" alt="icone de home" class="menu-icon">
-                    <p>Dashborad</p>
+                    <img src="./img/icon-home-cinza.png" alt="Ícone de home" class="menu-icon">
+                    <p>Dashboard</p>
                 </a>
                 <a href="pacientes.html" class="menu-align">
-                    <img src="./img/icon-users-cinza.png" alt="icone de pacientes" class="menu-icon">
+                    <img src="./img/icon-users-cinza.png" alt="Ícone de pacientes" class="menu-icon">
                     <p>Pacientes</p>
                 </a>
                 <a href="relatorios.html" class="menu-align">
-                    <img src="./img/icon-relatorio-cinza.png" alt="icone de relatorios" class="menu-icon">
+                    <img src="./img/icon-relatorio-cinza.png" alt="Ícone de relatórios" class="menu-icon">
                     <p>Relatórios</p>
                 </a>
                 <a href="configuracoes.html" class="menu-align">
-                    <img src="./img/icon-configuration-cinza.png" alt="icone de configuracoes" class="menu-icon">
-                    <p>Configuracoes</p>
+                    <img src="./img/icon-configuration-cinza.png" alt="Ícone de configurações" class="menu-icon">
+                    <p>Configurações</p>
                 </a>
             </nav>
 
             <div class="menu-align-bottom">
                 <a href="ajuda.html" class="menu-align">
-                    <img src="./img/icon-help-cinza.png" alt="icone de ajuda" class="menu-icon">
+                    <img src="./img/icon-help-cinza.png" alt="Ícone de ajuda" class="menu-icon">
                     <p>Ajuda</p>
                 </a>
-                <a href="#" class="menu-align">
-                    <img src="./img/icon-support-cinza.png" alt="icone de suporte" class="menu-icon">
+                <a href="suporte.html" class="menu-align">
+                    <img src="./img/icon-support-cinza.png" alt="Ícone de suporte" class="menu-icon">
                     <p>Suporte</p>
                 </a>
                 <a href="login.html" class="menu-align">
-                    <img src="./img/icon-logout-cinza.png" alt="icone de saida" class="menu-icon">
+                    <img src="./img/icon-logout-cinza.png" alt="Ícone de saída" class="menu-icon">
                     <p>Sair</p>
                 </a>
             </div>
@@ -73,21 +72,21 @@
             <header class="header-geral">
                 <div class="foto-perfil-wrapper">
                     <label for="fotoPerfilInput" class="foto-perfil-label" title="Clique para alterar a foto">
-                        <img src="./img/foto-nutricionista.png" alt="foto de uma nutricionista" class="img-perfil"
-                            id="fotoPerfilPreview">
+                        <img src="./img/foto-nutricionista.png" alt="Foto de uma nutricionista" class="img-perfil" id="fotoPerfilPreview">
                     </label>
                     <input type="file" id="fotoPerfilInput" accept="image/*" hidden>
                 </div>
 
                 <form role="search" class="barra-pesquisa" onsubmit="return false;">
-                    <img src="./img/icon-lupa.png" alt="icone de lupa" class="icon-lupa">
+                    <img src="./img/icon-lupa.png" alt="Ícone de lupa" class="icon-lupa">
                     <input type="search" placeholder="Buscar pacientes, dietas, relatórios..." aria-label="Buscar">
                 </form>
 
                 <div class="container-img-header">
                     <p class="header-text">Dra. Júlia Macedo</p>
-                    <a href="configuracoes.html"><img src="./img/icon-configuration.png" alt="icone de configuracao"
-                            class="img-configuration"></a>
+                    <a href="configuracoes.html">
+                        <img src="./img/icon-configuration.png" alt="Ícone de configuração" class="img-configuration">
+                    </a>
                 </div>
             </header>
 
@@ -95,7 +94,7 @@
                 <div class="relatorios-page-header">
                     <div>
                         <p class="consultas-title">Relatórios</p>
-                        <p class="consultas-sub">Histórico e emissao de relatórios clínicos dos pacientes.</p>
+                        <p class="consultas-sub">Histórico e emissão de relatórios clínicos dos pacientes.</p>
                     </div>
                     <button type="button" class="btn-primario" id="btnAbrirGerar">Gerar Relatório</button>
                 </div>
@@ -107,7 +106,7 @@
                     </div>
                     <div class="card-dado kpi-teal">
                         <div class="card-num" id="kpiMes">—</div>
-                        <div class="card-label">Gerados este mes</div>
+                        <div class="card-label">Gerados este mês</div>
                     </div>
                     <div class="card-dado kpi-amarelo">
                         <div class="card-num" id="kpiPendentes">—</div>
@@ -152,7 +151,7 @@
 
                 <div class="relatorios-toolbar">
                     <div class="busca-relatorio">
-                        <img src="./img/icon-lupa.png" alt="icone de lupa" class="icon-lupa">
+                        <img src="./img/icon-lupa.png" alt="Ícone de lupa" class="icon-lupa">
                         <input type="text" id="buscaRelatorioInput" placeholder="Buscar por paciente ou relatório...">
                     </div>
 
@@ -180,13 +179,12 @@
                                 <th>Período</th>
                                 <th>Data de Geração</th>
                                 <th>Status</th>
-                                <th class="th-acoes">Ações</th>
+                                <th>Ações</th>
                             </tr>
                         </thead>
                         <tbody id="tabelaRelatoriosBody"></tbody>
                     </table>
-                    <div class="empty-relatorios" id="emptyRelatorios" hidden>Nenhum relatório encontrado para esse
-                        filtro.</div>
+                    <div class="empty-relatorios" id="emptyRelatorios" hidden>Nenhum relatório encontrado para esse filtro.</div>
                 </div>
 
                 <div class="paginacao" id="paginacaoRelatorios"></div>
@@ -197,12 +195,6 @@
 
     <script src="./js/script.js"></script>
     <script src="./js/relatorios.js"></script>
-    </div>
-    </section>
-    </div>
-
-    </div>
-
 </body>
 
 </html>

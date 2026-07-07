@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
@@ -10,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="icon" href="./img/nutrition.png">
+
+    <script src="./js/cadastro.js" defer></script>
 </head>
 
 <body>
@@ -20,34 +23,37 @@
                 <h1>Crie sua Conta</h1>
             </div>
 
-            <form action="select" class="cadastro-form">
+            <form class="cadastro-form" id="formCadastro">
                 <p class="role-label">Você é um:</p>
-                
+
                 <div class="role-selection">
-                    <div class="cadastro-box-nutri">
+                    <div class="cadastro-box-nutri cadastro-box-selecionada" data-role="nutricionista">
                         <img src="./img/icon-nutritionist.png" alt="icone nutricionista" class="cadastro-img">
                         <h3>Nutricionista</h3>
                         <p>Profissional de Saúde: Gerencie seus pacientes, crie planos alimentares e acompanhe o progresso.</p>
                     </div>
 
-                    <div class="cadastro-box-patient">
+                    <div class="cadastro-box-patient cadastro-box-desabilitada" data-role="paciente">
                         <img src="./img/icon-patient.png" alt="icone paciente" class="cadastro-img">
                         <h3>Paciente</h3>
                         <p>Usuário do Sistema: Acesse seus planos alimentares, acompanhe seu progresso e comunique-se.</p>
+                        <span class="cadastro-em-breve">Em breve</span>
                     </div>
                 </div>
 
                 <div class="inputs-container">
-                    <input type="text" placeholder="Nome Completo" required>
-                    <input type="email" name="email" id="email" placeholder="E-mail" required>
-                
+                    <input type="text" id="cadastroNome" placeholder="Nome Completo" autocomplete="name" required>
+                    <input type="email" name="email" id="cadastroEmail" placeholder="E-mail" autocomplete="email" required>
+
                     <div class="password-row">
-                        <input type="password" placeholder="Senha" required>
-                        <input type="password" placeholder="Confirmar Senha" required>
+                        <input type="password" id="cadastroSenha" placeholder="Senha" autocomplete="new-password" required minlength="8">
+                        <input type="password" id="cadastroConfirmarSenha" placeholder="Confirmar Senha" autocomplete="new-password" required minlength="8">
                     </div>
                 </div>
 
-                <button type="submit" class="btn-cadastrar">Cadastrar</button>
+                <p class="cadastro-erro" id="cadastroErro" hidden></p>
+
+                <button type="submit" class="btn-cadastrar" id="btnCadastrar">Cadastrar</button>
 
                 <p class="login-link">Já tem conta? <a href="login.html">Entrar</a></p>
             </form>

@@ -1,191 +1,286 @@
+<!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nutri Boost - Pacientes</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <link rel="icon" href="./img/nutrition.png">
 
-  <link rel="stylesheet" href="./css/main.css">
-  <link rel="stylesheet" href="./css/menu.css">
-  <link rel="stylesheet" href="./css/header.css">
-  <link rel="stylesheet" href="./css/consultas.css">
-  <link rel="stylesheet" href="./css/resumo.css">
-  <link rel="stylesheet" href="./css/pacientes.css">
-  <link rel="stylesheet" href="./css/pacientes-page.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutri Boost - Pacientes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="./img/nutrition.png">
+
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/menu.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/consultas.css">
+    <link rel="stylesheet" href="./css/resumo.css">
+    <link rel="stylesheet" href="./css/pacientes.css">
+    <link rel="stylesheet" href="./css/pacientes-page.css">
+
+    <script src="./js/auth-guard.js"></script>
 </head>
+
 <body>
 
-  <div class="layout-wrapper">
-    <aside class="sidebar">
-      <div class="menu-hamburguer" id="menuToggle">
-        <img src="./img/menu-hamburguer.png" alt="menu hamburguer" class="option-hamburguer">
-        <span>Menu</span>
-      </div>
-
-      <div class="logo-container">
-        <img src="./img/logo-nutri-boost.png" alt="Logo da Nutri Boost" class="menu-logo" width="280" height="80">
-      </div>
-
-      <nav class="menu-principal">
-        <a href="index.html" class="menu-align">
-          <img src="./img/icon-home-cinza.png" alt="icone de home" class="menu-icon">
-          <p>Dashboard</p>
-        </a>
-        <a href="pacientes.html" class="menu-align menu-active">
-          <img src="./img/icon-users-cinza.png" alt="icone de pacientes" class="menu-icon">
-          <p>Pacientes</p>
-        </a>
-        <a href="relatorios.html" class="menu-align">
-          <img src="./img/icon-relatorio-cinza.png" alt="icone de relatorios" class="menu-icon">
-          <p>Relatórios</p>
-        </a>
-        <a href="configuracoes.html" class="menu-align">
-          <img src="./img/icon-configuration-cinza.png" alt="icone de configuracao" class="menu-icon">
-          <p>Configurações</p>
-        </a>
-      </nav>
-
-      <hr class="divisor-menu">
-
-      <div class="menu-align-bottom">
-        <a href="ajuda.html" class="menu-align"><img src="./img/icon-help.png" alt="icone de ajuda" class="menu-icon"><p class="text-menu">Ajuda</p></a>
-        <a href="#" class="menu-align"><img src="./img/icon-support.png" alt="icone de suporte" class="menu-icon"><p class="text-menu">Suporte</p></a>
-        <a href="login.html" class="menu-align"><img src="./img/icon-logout.png" alt="icone de saida" class="menu-icon"><p class="text-menu">Sair</p></a>
-      </div>
-    </aside>
-
-    <div class="main-content">
-      <header class="header-geral">
-        <div class="foto-perfil-wrapper">
-          <label for="fotoPerfilInput" class="foto-perfil-label" title="Clique para alterar a foto">
-            <img src="./img/foto-nutricionista.png" alt="foto de uma nutricionista" class="img-perfil" id="fotoPerfilPreview">
-          </label>
-          <input type="file" id="fotoPerfilInput" accept="image/*" hidden>
-        </div>
-
-        <form role="search" class="barra-pesquisa" onsubmit="return false;">
-          <img src="./img/icon-lupa.png" alt="icone de lupa" class="icon-lupa">
-          <input type="search" placeholder="Buscar pacientes, dietas, relatórios..." aria-label="Buscar">
-        </form>
-
-        <div class="container-img-header">
-          <p class="header-text">Dra. Júlia Macedo</p>
-          <a href="configuracoes.html"><img src="./img/icon-configuration.png" alt="icone de configuracao" class="img-configuration"></a>
-        </div>
-      </header>
-
-      <section class="pacientes-page">
-
-        <div class="pacientes-page-header">
-          <div>
-            <p class="consultas-title">Pacientes</p>
-            <p class="consultas-sub">Gerencie toda a sua carteira de pacientes em um só lugar.</p>
-          </div>
-          <button type="button" class="btn-novo-paciente"> Novo Paciente</button>
-        </div>
-
-        <div class="resumo-pacientes-row">
-          <div class="card resumo-mini">
-            <p class="resumo-text">Total de Pacientes</p>
-            <p class="resumo-number" id="resumoTotal">—</p>
-          </div>
-          <div class="card resumo-mini">
-            <p class="resumo-text">Ativos</p>
-            <p class="resumo-number" id="resumoAtivos" style="color:var(--quarternary-bg-color)">—</p>
-          </div>
-          <div class="card resumo-mini">
-            <p class="resumo-text">Aguardando Retorno</p>
-            <p class="resumo-number" id="resumoAguardando" style="color:var(--laranja)">—</p>
-          </div>
-          <div class="card resumo-mini">
-            <p class="resumo-text">Inativos</p>
-            <p class="resumo-number" id="resumoInativos" style="color:var(--cinza)">—</p>
-          </div>
-        </div>
-
-        <div class="pacientes-toolbar">
-          <div class="busca-paciente-grande">
-            <img src="./img/icon-lupa.png" alt="icone de lupa" class="icon-lupa">
-            <input type="text" id="buscaPacienteInput" placeholder="Buscar paciente pelo nome...">
-          </div>
-
-          <div class="filtro-status" id="filtroStatus">
-            <button class="filtro-btn ativo-filtro" data-status="todos">Todos</button>
-            <button class="filtro-btn" data-status="ativo">Ativo</button>
-            <button class="filtro-btn" data-status="acompanhamento">Acompanhamento</button>
-            <button class="filtro-btn" data-status="aguardando">Aguardando</button>
-            <button class="filtro-btn" data-status="inativo">Inativo</button>
-          </div>
-
-          <select id="ordenarPor" class="select-ordenar">
-            <option value="nome">Ordenar por nome</option>
-            <option value="visita">Última visita</option>
-            <option value="status">Status</option>
-          </select>
-
-          <div class="toggle-visualizacao">
-            <button class="toggle-btn ativo-toggle" data-view="grade" title="Visualizar em grade">
-              <img src="./img/icon-grade.png" alt="icone de grade" class="icon-grade">
-            </button>
-            <button class="toggle-btn" data-view="lista" title="Visualizar em lista">
-              <img src="./img/menu-hamburguer-cinza.png" alt="menu de hamburguer" class="option-hamburguer">
-            </button>
-          </div>
-        </div>
-
-        <div class="pacientes-grid" id="pacientesGrid"></div>
-
-        <div class="paginacao" id="paginacao"></div>
-        
-        <div class="ficha-detalhe tabs-css" id="fichaDetalhe">
-          <div class="ficha-header">
-            <button class="ficha-fechar" id="fichaFechar" title="Fechar ficha">✕</button>
-            <div class="ficha-avatar" id="fichaAvatar"></div>
-            <div>
-              <p class="ficha-nome" id="fichaNome"></p>
-              <p class="ficha-meta" id="fichaMeta"></p>
-            </div>
-          </div>
-
-          <input type="radio" name="ficha-tabs" id="tab-dieta" checked>
-          <input type="radio" name="ficha-tabs" id="tab-peso">
-          <input type="radio" name="ficha-tabs" id="tab-obs">
-          <input type="radio" name="ficha-tabs" id="tab-rel">
-
-          <div class="tab-nav">
-            <label for="tab-dieta">Plano Alimentar</label>
-            <label for="tab-peso">Evolução de Peso</label>
-            <label for="tab-obs">Observações</label>
-            <label for="tab-rel">Relatórios</label>
-          </div>
-
-          <div class="tab-panels">
-            <div class="panel panel-dieta">
-              <table class="dieta-table" id="fichaDietaTable">
-                <thead><tr><th>Refeição</th><th>Itens</th><th>Calorias</th></tr></thead>
-                <tbody id="fichaDietaBody"></tbody>
-              </table>
+    <div class="layout-wrapper">
+        <aside class="sidebar">
+            <div class="menu-hamburguer" id="menuToggle">
+                <img src="./img/menu-hamburguer.png" alt="Menu hambúrguer" class="option-hamburguer">
+                <span>Menu</span>
             </div>
 
-            <div class="panel panel-peso">
-              <div class="peso-stats-row" id="fichaPesoStats"></div>
-              <div class="peso-barra-evolucao" id="fichaPesoBarras"></div>
+            <div class="logo-container">
+                <img src="./img/logo-nutri-boost.png" alt="Logo da Nutri Boost" class="menu-logo" width="280" height="80">
             </div>
 
-            <div class="panel panel-obs" id="fichaObsList"></div>
+            <nav class="menu-principal">
+                <a href="index.html" class="menu-align">
+                    <img src="./img/icon-home-cinza.png" alt="Ícone de home" class="menu-icon">
+                    <p>Dashboard</p>
+                </a>
+                <a href="pacientes.html" class="menu-align menu-active">
+                    <img src="./img/icon-users-cinza.png" alt="Ícone de pacientes" class="menu-icon">
+                    <p>Pacientes</p>
+                </a>
+                <a href="relatorios.html" class="menu-align">
+                    <img src="./img/icon-relatorio-cinza.png" alt="Ícone de relatórios" class="menu-icon">
+                    <p>Relatórios</p>
+                </a>
+                <a href="configuracoes.html" class="menu-align">
+                    <img src="./img/icon-configuration-cinza.png" alt="Ícone de configuração" class="menu-icon">
+                    <p>Configurações</p>
+                </a>
+            </nav>
 
-            <div class="panel panel-rel" id="fichaRelList"></div>
-          </div>
+            <hr class="divisor-menu">
+
+            <div class="menu-align-bottom">
+                <a href="ajuda.html" class="menu-align">
+                    <img src="./img/icon-help-cinza.png" alt="Ícone de ajuda" class="menu-icon">
+                    <p class="text-menu">Ajuda</p>
+                </a>
+                <a href="suporte.html" class="menu-align">
+                    <img src="./img/icon-support-cinza.png" alt="Ícone de suporte" class="menu-icon">
+                    <p class="text-menu">Suporte</p>
+                </a>
+                <a href="login.html" class="menu-align">
+                    <img src="./img/icon-logout-cinza.png" alt="Ícone de saída" class="menu-icon">
+                    <p class="text-menu">Sair</p>
+                </a>
+            </div>
+        </aside>
+
+        <div class="main-content">
+            <header class="header-geral">
+                <div class="foto-perfil-wrapper">
+                    <label for="fotoPerfilInput" class="foto-perfil-label" title="Clique para alterar a foto">
+                        <img src="./img/foto-nutricionista.png" alt="Foto de uma nutricionista" class="img-perfil" id="fotoPerfilPreview">
+                    </label>
+                    <input type="file" id="fotoPerfilInput" accept="image/*" hidden>
+                </div>
+
+                <form role="search" class="barra-pesquisa" onsubmit="return false;">
+                    <img src="./img/icon-lupa.png" alt="Ícone de lupa" class="icon-lupa">
+                    <input type="search" placeholder="Buscar pacientes, dietas, relatórios..." aria-label="Buscar">
+                </form>
+
+                <div class="container-img-header">
+                    <p class="header-text">Dra. Júlia Macedo</p>
+                    <a href="configuracoes.html">
+                        <img src="./img/icon-configuration.png" alt="Ícone de configuração" class="img-configuration">
+                    </a>
+                </div>
+            </header>
+
+            <section class="pacientes-page">
+
+                <div class="pacientes-page-header">
+                    <div>
+                        <p class="consultas-title">Pacientes</p>
+                        <p class="consultas-sub">Gerencie toda a sua carteira de pacientes em um só lugar.</p>
+                    </div>
+                    <button type="button" class="btn-novo-paciente" id="btnAbrirNovoPaciente"> Novo Paciente</button>
+                </div>
+
+                <div class="resumo-pacientes-row">
+                    <div class="card resumo-mini">
+                        <p class="resumo-text">Total de Pacientes</p>
+                        <p class="resumo-number" id="resumoTotal">—</p>
+                    </div>
+                    <div class="card resumo-mini">
+                        <p class="resumo-text">Ativos</p>
+                        <p class="resumo-number" id="resumoAtivos" style="color:var(--quarternary-bg-color)">—</p>
+                    </div>
+                    <div class="card resumo-mini">
+                        <p class="resumo-text">Aguardando Retorno</p>
+                        <p class="resumo-number" id="resumoAguardando" style="color:var(--laranja)">—</p>
+                    </div>
+                    <div class="card resumo-mini">
+                        <p class="resumo-text">Inativos</p>
+                        <p class="resumo-number" id="resumoInativos" style="color:var(--cinza)">—</p>
+                    </div>
+                </div>
+
+                <div class="painel-novo-paciente" id="painelNovoPaciente">
+                    <div class="painel-novo-paciente-header">
+                        <p class="card-title">Novo Paciente</p>
+                        <button type="button" class="painel-fechar" id="btnFecharNovoPaciente">Fechar</button>
+                    </div>
+                    <form class="painel-novo-paciente-form" id="formNovoPaciente">
+                        <div class="campo">
+                            <label for="novoNome">Nome completo</label>
+                            <input type="text" id="novoNome" required>
+                        </div>
+                        <div class="campo">
+                            <label for="novaIdade">Age</label>
+                            <input type="number" id="novaIdade" min="0" max="120">
+                        </div>
+                        <div class="campo">
+                            <label for="novoStatus">Status</label>
+                            <select id="novoStatus" required>
+                                <option value="ativo">Ativo</option>
+                                <option value="acompanhamento">Em Acompanhamento</option>
+                                <option value="aguardando">Aguardando Retorno</option>
+                                <option value="inativo">Inativo</option>
+                            </select>
+                        </div>
+                        <div class="campo">
+                            <label for="novoObjetivo">Objetivo</label>
+                            <select id="novoObjetivo" required>
+                                <option value="emagrecimento">Emagrecimento</option>
+                                <option value="massa">Ganho de Massa Magra</option>
+                                <option value="definicao">Definição</option>
+                            </select>
+                        </div>
+                        <div class="campo campo-botao">
+                            <button type="submit" class="btn-novo-paciente">Cadastrar</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="pacientes-toolbar">
+                    <div class="busca-paciente-grande">
+                        <img src="./img/icon-lupa.png" alt="Ícone de lupa" class="icon-lupa">
+                        <input type="text" id="buscaPacienteInput" placeholder="Buscar paciente pelo nome...">
+                    </div>
+
+                    <div class="filtro-status" id="filtroStatus">
+                        <button class="filtro-btn ativo-filtro" data-status="todos">Todos</button>
+                        <button class="filtro-btn" data-status="ativo">Ativo</button>
+                        <button class="filtro-btn" data-status="acompanhamento">Acompanhamento</button>
+                        <button class="filtro-btn" data-status="aguardando">Aguardando</button>
+                        <button class="filtro-btn" data-status="inativo">Inativo</button>
+                    </div>
+
+                    <select id="ordenarPor" class="select-ordenar">
+                        <option value="nome">Ordenar por nome</option>
+                        <option value="visita">Última visita</option>
+                        <option value="status">Status</option>
+                    </select>
+
+                    <div class="toggle-visualizacao">
+                        <button class="toggle-btn ativo-toggle" data-view="grade" title="Visualizar em grade">
+                            <img src="./img/icon-grade.png" alt="Ícone de grade" class="icon-grade">
+                        </button>
+                        <button class="toggle-btn" data-view="lista" title="Visualizar em lista">
+                            <img src="./img/menu-hamburguer-cinza.png" alt="Menu de hambúrguer" class="option-hamburguer">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="pacientes-grid" id="pacientesGrid"></div>
+
+                <div class="paginacao" id="paginacao"></div>
+
+                <div class="ficha-detalhe tabs-css" id="fichaDetalhe">
+                    <div class="ficha-header">
+                        <button class="ficha-fechar" id="fichaFechar" title="Fechar ficha">✕</button>
+                        <button class="ficha-editar" id="fichaEditar" title="Editar paciente">Editar</button>
+                        <button class="ficha-excluir" id="fichaExcluir" title="Excluir paciente">Excluir</button>
+                        <div class="ficha-avatar" id="fichaAvatar"></div>
+                        <div>
+                            <p class="ficha-nome" id="fichaNome"></p>
+                            <p class="ficha-meta" id="fichaMeta"></p>
+                        </div>
+                    </div>
+
+                    <div class="painel-editar-paciente" id="painelEditarPaciente">
+                        <form class="painel-editar-form" id="formEditarPaciente">
+                            <div class="campo">
+                                <label for="editarNome">Nome completo</label>
+                                <input type="text" id="editarNome" required>
+                            </div>
+                            <div class="campo">
+                                <label for="editarIdade">Idade</label>
+                                <input type="number" id="editarIdade" min="0" max="120">
+                            </div>
+                            <div class="campo">
+                                <label for="editarStatus">Status</label>
+                                <select id="editarStatus" required>
+                                    <option value="ativo">Ativo</option>
+                                    <option value="acompanhamento">Em Acompanhamento</option>
+                                    <option value="aguardando">Aguardando Retorno</option>
+                                    <option value="inativo">Inativo</option>
+                                </select>
+                            </div>
+                            <div class="campo">
+                                <label for="editarObjetivo">Objetivo</label>
+                                <select id="editarObjetivo" required>
+                                    <option value="emagrecimento">Emagrecimento</option>
+                                    <option value="massa">Ganho de Massa Magra</option>
+                                    <option value="definicao">Definição</option>
+                                </select>
+                            </div>
+                            <div class="campo campo-botao">
+                                <button type="submit" class="btn-primario">Salvar Alterações</button>
+                                <button type="button" class="btn-cancelar" id="btnCancelarEdicao">Cancelar</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <input type="radio" name="ficha-tabs" id="tab-dieta" checked>
+                    <input type="radio" name="ficha-tabs" id="tab-peso">
+                    <input type="radio" name="ficha-tabs" id="tab-obs">
+                    <input type="radio" name="ficha-tabs" id="tab-rel">
+
+                    <div class="tab-nav">
+                        <label for="tab-dieta">Plano Alimentar</label>
+                        <label for="tab-peso">Evolução de Peso</label>
+                        <label for="tab-obs">Observações</label>
+                        <label for="tab-rel">Relatórios</label>
+                    </div>
+
+                    <div class="tab-panels">
+                        <div class="panel panel-dieta">
+                            <table class="dieta-table" id="fichaDietaTable">
+                                <thead>
+                                    <tr>
+                                        <th>Refeição</th>
+                                        <th>Itens</th>
+                                        <th>Calorias</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="fichaDietaBody"></tbody>
+                            </table>
+                        </div>
+
+                        <div class="panel panel-peso">
+                            <div class="peso-stats-row" id="fichaPesoStats"></div>
+                            <div class="peso-barra-evolucao" id="fichaPesoBarras"></div>
+                        </div>
+
+                        <div class="panel panel-obs" id="fichaObsList"></div>
+                        <div class="panel panel-rel" id="fichaRelList"></div>
+                    </div>
+                </div>
+
+            </section>
         </div>
-
-      </section>
     </div>
-  </div>
 
-  <script src="./js/script.js"></script>
-  <script src="./js/pacientes.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/pacientes.js"></script>
 </body>
+
 </html>

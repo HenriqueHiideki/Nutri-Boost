@@ -9,10 +9,9 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="icon" href="./img/nutrition.png">
+    <script src="./js/login.js"></script>
 </head>
 
 <body>
@@ -22,19 +21,20 @@
         </div>
         <div class="login-container">
             <img src="./img/logo-nutri-boost.png" alt="Logo Nutri Boost" class="login-logo-inline">
-            <p class="login-title">Seja Bem-Vindo!</p>
+            <p class="login-title">Seja Bem-vindo!</p>
 
-            <form action="/login.html" method="POST" class="login-form">
+            <form action="/login.html" method="POST" class="login-form" id="formLogin">
                 <div class="login-box">
-                    <input type="email" id="usuario" name="usuario" required autocomplete="username" class="login-input"
-                        placeholder="Digite seu usuário / e-mail">
+                    <input type="email" id="usuario" name="usuario" required autocomplete="username" class="login-input" placeholder="Digite seu usuário / e-mail">
                 </div>
                 <div class="login-box">
-                    <input type="password" name="senha" id="senha" required autocomplete="current-password"
-                        class="login-input" placeholder="Digite sua senha">
+                    <input type="password" name="senha" id="senha" required autocomplete="current-password" class="login-input" placeholder="Digite sua senha">
                 </div>
+
+                <p class="login-erro" id="loginErro" hidden></p>
+
                 <div class="login-bt-container">
-                    <button type="submit" class="login-bt">Entrar</button>
+                    <button type="submit" class="login-bt" id="btnLogin">Entrar</button>
                 </div>
             </form>
 

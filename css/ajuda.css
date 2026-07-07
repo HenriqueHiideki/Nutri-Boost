@@ -21,7 +21,6 @@
   margin-top: 10px;
 }
 
-/* Guia "como usar" */
 .guia-lista {
   display: flex;
   flex-direction: column;
@@ -60,7 +59,6 @@
   line-height: 1.6;
 }
 
-/* FAQ com <details> nativo */
 .faq-lista {
   display: flex;
   flex-direction: column;
@@ -110,7 +108,6 @@
   padding-bottom: 16px;
 }
 
-/* Contato */
 .ajuda-contato {
   display: flex;
   align-items: center;
@@ -138,7 +135,6 @@
   opacity: 0.9;
 }
 
-/* Responsivo */
 @media (max-width: 640px) {
   .ajuda-page {
     padding: 18px 16px;
