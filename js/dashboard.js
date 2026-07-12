@@ -8,10 +8,22 @@ document.addEventListener("DOMContentLoaded", () => {
     inativo: { label: "Inativo", cor: "#9aa5a0" },
   };
 
-  const avatarCores = ["#e08e3e", "#4f8a8a", "#8a63d2", "#4472c4", "#3f7d52", "#d9574f"];
+  const avatarCores = [
+    "#e08e3e",
+    "#4f8a8a",
+    "#8a63d2",
+    "#4472c4",
+    "#3f7d52",
+    "#d9574f",
+  ];
 
   function iniciais(nome) {
-    return nome.split(" ").map((p) => p[0]).slice(0, 2).join("").toUpperCase();
+    return nome
+      .split(" ")
+      .map((p) => p[0])
+      .slice(0, 2)
+      .join("")
+      .toUpperCase();
   }
 
   function corAvatar(id) {
@@ -38,11 +50,13 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!resposta.ok) throw new Error("Erro ao buscar pacientes");
 
       const pacientes = await resposta.json();
-
-      // Resumo por status
       const total = pacientes.length;
-      const ativos = pacientes.filter((p) => p.status === "ativo" || p.status === "acompanhamento").length;
-      const aguardando = pacientes.filter((p) => p.status === "aguardando").length;
+      const ativos = pacientes.filter(
+        (p) => p.status === "ativo" || p.status === "acompanhamento",
+      ).length;
+      const aguardando = pacientes.filter(
+        (p) => p.status === "aguardando",
+      ).length;
       const inativos = pacientes.filter((p) => p.status === "inativo").length;
 
       resumoEl.innerHTML = `
@@ -88,6 +102,18 @@ document.addEventListener("DOMContentLoaded", () => {
       resumoEl.innerHTML = `<p style="color:var(--texto-suave); font-size:13px;">Não foi possível carregar os dados de pacientes.</p>`;
     }
   }
+
+  document
+    .getElementById("btnAgendarConsulta")
+    ?.addEventListener("click", () => {
+      alert(
+        "A agenda de consultas ainda está em desenvolvimento. Em breve você poderá agendar consultas por aqui.",
+      );
+    });
+
+  document.getElementById("btnCriarPlano")?.addEventListener("click", () => {
+    window.location.href = "pacientes.html";
+  });
 
   carregarResumoDashboard();
 });
