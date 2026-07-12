@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const pool = require('../db');
 
+// ----------------------------------------------------------
 router.get('/', async (req, res) => {
   try {
     const resultado = await pool.query(`
@@ -23,8 +24,10 @@ router.get('/', async (req, res) => {
         ORDER BY data_medicao DESC
         LIMIT 1
       ) cc ON true
+      WHERE p.nutricionista_id = $1
       ORDER BY p.nome
-    `);
+    `, [req.nutricionistaId]);
+
     res.json(resultado.rows);
   } catch (erro) {
     console.error(erro);
@@ -32,6 +35,7 @@ router.get('/', async (req, res) => {
   }
 });
 
+//----------------------------------------------------
 router.post('/', async (req, res) => {
   const { nome, idade, status, objetivo, ultima_visita } = req.body;
 
@@ -54,6 +58,7 @@ router.post('/', async (req, res) => {
   }
 });
 
+//---------------------------------
 router.put('/:id', async (req, res) => {
   const { id } = req.params;
   const { nome, idade, status, objetivo, ultima_visita } = req.body;
@@ -66,9 +71,9 @@ router.put('/:id', async (req, res) => {
     const resultado = await pool.query(
       `UPDATE pacientes
        SET nome = $1, idade = $2, status = $3, objetivo = $4, ultima_visita = $5
-       WHERE id = $6
+       WHERE id = $6 AND nutricionista_id = $7
        RETURNING id, nome, idade, status, objetivo, ultima_visita`,
-      [nome, idade || null, status, objetivo, ultima_visita || null, id]
+      [nome, idade || null, status, objetivo, ultima_visita || null, id, req.nutricionistaId]
     );
 
     if (resultado.rows.length === 0) {
@@ -82,14 +87,14 @@ router.put('/:id', async (req, res) => {
   }
 });
 
-
+// ------------------------
 router.delete('/:id', async (req, res) => {
   const { id } = req.params;
 
   try {
     const resultado = await pool.query(
-      'DELETE FROM pacientes WHERE id = $1 RETURNING id',
-      [id]
+      'DELETE FROM pacientes WHERE id = $1 AND nutricionista_id = $2 RETURNING id',
+      [id, req.nutricionistaId]
     );
 
     if (resultado.rows.length === 0) {
