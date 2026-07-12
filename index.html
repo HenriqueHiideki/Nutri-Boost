@@ -7,7 +7,9 @@
     <title>Nutri Boost - Sistema para Nutricionistas</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <link rel="icon" href="./img/nutrition.png">
 
     <link rel="stylesheet" href="./css/main.css">
@@ -32,7 +34,8 @@
             </div>
 
             <div class="logo-container">
-                <img src="./img/logo-nutri-boost.png" alt="Logo da Nutri Boost" class="menu-logo" width="280" height="80">
+                <img src="./img/logo-nutri-boost.png" alt="Logo da Nutri Boost" class="menu-logo" width="280"
+                    height="80">
             </div>
 
             <nav class="menu-principal">
@@ -62,11 +65,13 @@
                     <p class="text-menu">Ajuda</p>
                 </a>
                 <a href="suporte.html" class="menu-align">
-                    <img src="./img/icon-support-cinza.png" alt="icone de suporte" class="menu-icon" width="40" height="40">
+                    <img src="./img/icon-support-cinza.png" alt="icone de suporte" class="menu-icon" width="40"
+                        height="40">
                     <p class="text-menu">Suporte</p>
                 </a>
                 <a href="login.html" class="menu-align">
-                    <img src="./img/icon-logout-cinza.png" alt="icone de saida" class="menu-icon" width="40" height="40">
+                    <img src="./img/icon-logout-cinza.png" alt="icone de saida" class="menu-icon" width="40"
+                        height="40">
                     <p class="text-menu">Sair</p>
                 </a>
             </div>
@@ -76,18 +81,21 @@
             <header class="header-geral">
                 <form role="search" class="barra-pesquisa">
                     <img src="./img/icon-lupa.png" alt="icone de lupa" class="icon-lupa">
-                    <input type="search" placeholder="Buscar pacientes, dietas, relatórios..." aria-label="Buscar" class="header-text">
+                    <input type="search" placeholder="Buscar pacientes, dietas, relatórios..." aria-label="Buscar"
+                        class="header-text">
                 </form>
 
                 <div class="container-img-header">
                     <div class="foto-perfil-wrapper">
                         <label for="fotoPerfilInput" class="foto-perfil-label" title="Clique para alterar a foto">
-                            <img src="./img/foto-nutricionista.png" alt="foto de uma nutricionista" class="img-perfil" id="fotoPerfilPreview">
+                            <img src="./img/foto-nutricionista.png" alt="foto de uma nutricionista" class="img-perfil"
+                                id="fotoPerfilPreview">
                         </label>
                         <input type="file" id="fotoPerfilInput" accept="image/*" hidden>
                     </div>
                     <p class="header-text">Dra. Júlia Macedo</p>
-                    <a href="configuracoes.html"><img src="./img/icon-configuration.png" alt="icone de configuracao" class="img-configuration"></a>
+                    <a href="configuracoes.html"><img src="./img/icon-configuration.png" alt="icone de configuracao"
+                            class="img-configuration"></a>
                 </div>
             </header>
 
@@ -109,19 +117,22 @@
                                 <button type="button" class="bt-consultas">Ver consultas</button>
                             </div>
                             <div class="card-consultas-container">
-                                <img src="./img/paciente1.png" alt="imagem ilustrativa de um paciente" class="card-consultas-img" width="80" height="80">
+                                <img src="./img/paciente1.png" alt="imagem ilustrativa de um paciente"
+                                    class="card-consultas-img" width="80" height="80">
                                 <p class="card-consultas-text">Amanda Nunes <span>- 15:00</span></p>
                                 <button type="button" class="card-bt-consultas">Detalhes</button>
                             </div>
 
                             <div class="card-consultas-container">
-                                <img src="./img/paciente2.png" alt="imagem ilustrativa de um paciente" class="card-consultas-img" width="80" height="80">
+                                <img src="./img/paciente2.png" alt="imagem ilustrativa de um paciente"
+                                    class="card-consultas-img" width="80" height="80">
                                 <p class="card-consultas-text">Letícia Soares <span>- 17:00</span></p>
                                 <button type="button" class="card-bt-consultas">Detalhes</button>
                             </div>
 
                             <div class="card-consultas-container">
-                                <img src="./img/paciente3.png" alt="imagem ilustrativa de um paciente" class="card-consultas-img" width="80" height="80">
+                                <img src="./img/paciente3.png" alt="imagem ilustrativa de um paciente"
+                                    class="card-consultas-img" width="80" height="80">
                                 <p class="card-consultas-text">Maria Eduarda <span>- 18:00</span></p>
                                 <button type="button" class="card-bt-consultas">Detalhes</button>
                             </div>
@@ -215,126 +226,17 @@
 
                     <div class="pacientes-section" id="pacientes">
                         <div class="pacientes-header">
-                            <h2 class="card-title" style="font-size:19px;">Gerenciamento de Pacientes</h2>
-                            <div class="pacientes-tools">
-                                <div class="filtro-status">
-                                    <button class="filtro-btn ativo-filtro">Todos</button>
-                                    <button class="filtro-btn">Ativo</button>
-                                    <button class="filtro-btn">Acompanhamento</button>
-                                    <button class="filtro-btn">Aguardando</button>
-                                    <button class="filtro-btn">Inativo</button>
-                                </div>
-                                <a href="cadastro.html" class="btn-novo-paciente" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center;">Novo Paciente</a>
-                            </div>
+                            <h2 class="card-title" style="font-size:19px;">Resumo de Pacientes</h2>
+                            <a href="pacientes.html" class="btn-novo-paciente"
+                                style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center;">Gerenciar
+                                Pacientes</a>
                         </div>
 
-                        <div class="pacientes-grid">
-
-                            <div class="paciente-card">
-                                <div class="paciente-card-top">
-                                    <div>AN</div>
-                                    <div>
-                                        <p class="paciente-nome">Amanda Nunes</p>
-                                        <p class="paciente-info">29 anos · Última visita 28/06</p>
-                                    </div>
-                                </div>
-                                <div class="paciente-status">
-                                    <span class="status status-ativo">Ativo</span>
-                                    <span class="status status-obj-emagrecimento">Emagrecimento</span>
-                                </div>
-                                <div class="composicao-mini">
-                                    <div style="--pct-gordura:24%"></div>
-                                    <div class="comp-legend">
-                                        <span><span class="dot-legend" style="background:var(--laranja)"></span>Gordura: 24%</span>
-                                        <span><span class="dot-legend" style="background:var(--azul-obj)"></span>Massa magra: 76%</span>
-                                    </div>
-                                </div>
-                                <div class="paciente-card-actions">
-                                    <a href="#ficha" class="mini-action"> Dieta</a>
-                                    <a href="#ficha" class="mini-action"> Peso</a>
-                                    <a href="#ficha" class="mini-action"> Relatório</a>
-                                </div>
-                            </div>
-
-                            <div class="paciente-card">
-                                <div class="paciente-card-top">
-                                    <div>LS</div>
-                                    <div>
-                                        <p class="paciente-nome">Letícia Soares</p>
-                                        <p class="paciente-info">34 anos · Última visita 30/06</p>
-                                    </div>
-                                </div>
-                                <div class="paciente-status">
-                                    <span class="status status-acompanhamento">Em Acompanhamento</span>
-                                    <span class="status status-obj-definicao">Definição</span>
-                                </div>
-                                <div class="composicao-mini">
-                                    <div style="--pct-gordura:20%"></div>
-                                    <div class="comp-legend">
-                                        <span><span class="dot-legend" style="background:var(--laranja)"></span>Gordura: 20%</span>
-                                        <span><span class="dot-legend" style="background:var(--azul-obj)"></span>Massa magra: 80%</span>
-                                    </div>
-                                </div>
-                                <div class="paciente-card-actions">
-                                    <a href="#ficha" class="mini-action"> Dieta</a>
-                                    <a href="#ficha" class="mini-action"> Peso</a>
-                                    <a href="#ficha" class="mini-action"> Relatório</a>
-                                </div>
-                            </div>
-
-                            <div class="paciente-card">
-                                <div class="paciente-card-top">
-                                    <div>ME</div>
-                                    <div>
-                                        <p class="paciente-nome">Maria Eduarda</p>
-                                        <p class="paciente-info">41 anos · Última visita 27/06</p>
-                                    </div>
-                                </div>
-                                <div class="paciente-status">
-                                    <span class="status status-ativo">Ativo</span>
-                                    <span class="status status-obj-massa">Ganho de Massa Magra</span>
-                                </div>
-                                <div class="composicao-mini">
-                                    <div style="--pct-gordura:22%"></div>
-                                    <div class="comp-legend">
-                                        <span><span class="dot-legend" style="background:var(--laranja)"></span>Gordura: 22%</span>
-                                        <span><span class="dot-legend" style="background:var(--azul-obj)"></span>Massa magra: 78%</span>
-                                    </div>
-                                </div>
-                                <div class="paciente-card-actions">
-                                    <a href="#ficha" class="mini-action"> Dieta</a>
-                                    <a href="#ficha" class="mini-action"> Peso</a>
-                                    <a href="#ficha" class="mini-action"> Relatório</a>
-                                </div>
-                            </div>
-
-                            <div class="paciente-card">
-                                <div class="paciente-card-top">
-                                    <div>CE</div>
-                                    <div>
-                                        <p class="paciente-nome">Carlos Eduardo</p>
-                                        <p class="paciente-info">52 anos · Última visita 02/06</p>
-                                    </div>
-                                </div>
-                                <div class="paciente-status">
-                                    <span class="status status-aguardando">Aguardando Retorno</span>
-                                    <span class="status status-obj-emagrecimento">Emagrecimento</span>
-                                </div>
-                                <div class="composicao-mini">
-                                    <div style="--pct-gordura:29%"></div>
-                                    <div class="comp-legend">
-                                        <span><span class="dot-legend" style="background:var(--laranja)"></span>Gordura: 29%</span>
-                                        <span><span class="dot-legend" style="background:var(--azul-obj)"></span>Massa magra: 71%</span>
-                                    </div>
-                                </div>
-                                <div class="paciente-card-actions">
-                                    <a href="#ficha" class="mini-action"> Dieta</a>
-                                    <a href="#ficha" class="mini-action"> Peso</a>
-                                    <a href="#ficha" class="mini-action"> Relatório</a>
-                                </div>
-                            </div>
-
+                        <div class="dashboard-resumo-status" id="dashboardResumoStatus">
+                            <p style="color:var(--texto-suave); font-size:13px;">Carregando pacientes...</p>
                         </div>
+
+                        <div class="dashboard-pacientes-recentes" id="dashboardPacientesRecentes"></div>
                     </div>
                 </div>
             </section>
@@ -343,6 +245,7 @@
     </div>
 
     <script src="./js/script.js"></script>
+    <script src="./js/dashboard.js"></script>
 </body>
 
 </html>

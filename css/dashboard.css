@@ -127,6 +127,98 @@
   font-weight: 600;
 }
 
+.dashboard-resumo-status {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.dashboard-resumo-item {
+    background: var(--primary-bg-color);
+    border-radius: 12px;
+    padding: 14px 16px;
+    box-shadow: var(--shadow);
+    border-left: 4px solid var(--quarternary-bg-color);
+}
+
+.dashboard-resumo-item.item-teal { border-color: var(--tertiary-bg-color); }
+.dashboard-resumo-item.item-amarelo { border-color: #dcb23e; }
+.dashboard-resumo-item.item-cinza { border-color: var(--cinza); }
+
+.dashboard-resumo-num {
+    font-size: 22px;
+    font-weight: 800;
+    font-family: "Lora", serif;
+}
+
+.dashboard-resumo-lbl {
+    font-size: 11px;
+    color: var(--texto-suave);
+    font-weight: 600;
+    margin-top: 2px;
+}
+
+.dashboard-pacientes-recentes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 14px;
+}
+
+.dashboard-paciente-mini {
+    background: var(--primary-bg-color);
+    border-radius: 12px;
+    padding: 14px 16px;
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: inherit;
+    transition: 0.15s;
+}
+
+.dashboard-paciente-mini:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(31,42,36,0.1);
+}
+
+.dashboard-paciente-mini .avatar-mini {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    color: #fff;
+    font-weight: 700;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.dashboard-paciente-mini .nome {
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.dashboard-paciente-mini .status-mini {
+    font-size: 10.5px;
+    color: var(--texto-suave);
+    margin-top: 2px;
+}
+
+.dashboard-empty {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 24px;
+    color: var(--texto-suave);
+    font-size: 13px;
+    background: var(--primary-bg-color);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+
 @media (max-width: 1024px) {
   .dashboard-layout {
     grid-template-columns: 1fr;
@@ -136,9 +228,12 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+
+  .dashboard-resumo-status {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-/* ===== MOBILE (até 768px) ===== */
 @media (max-width: 768px) {
   .linha-inferior {
     grid-template-columns: 1fr;
