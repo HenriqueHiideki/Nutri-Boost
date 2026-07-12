@@ -11,6 +11,7 @@ const relatoriosRoutes = require('./routes/relatorios.routes');
 const authRoutes = require('./routes/auth.routes');
 const verificarToken = require('./middlewares/auth.middleware');
 const nutricionistasRoutes = require('./routes/nutricionistas.routes');
+const relatoriosGeralRoutes = require('./routes/relatorios-geral.routes');
 
 const app = express();
 
@@ -44,6 +45,7 @@ app.use('/pacientes', verificarToken, observacoesRoutes);
 app.use('/pacientes', verificarToken, relatoriosRoutes);
 app.use('/nutricionistas', nutricionistasRoutes);
 app.use('/auth', authRoutes);
+app.use('/relatorios', verificarToken, relatoriosGeralRoutes);
 
 const PORTA = process.env.PORT || 3000;
 app.listen(PORTA, () => {
