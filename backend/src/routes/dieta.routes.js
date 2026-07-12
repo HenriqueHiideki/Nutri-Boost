@@ -7,11 +7,12 @@ router.get('/:id/dieta', async (req, res) => {
 
   try {
     const resultado = await pool.query(
-      `SELECT id, refeicao, itens, kcal
-       FROM planos_alimentares
-       WHERE paciente_id = $1
-       ORDER BY id`,
-      [id]
+      `SELECT pa.id, pa.refeicao, pa.itens, pa.kcal
+       FROM planos_alimentares pa
+       JOIN pacientes p ON p.id = pa.paciente_id
+       WHERE pa.paciente_id = $1 AND p.nutricionista_id = $2
+       ORDER BY pa.id`,
+      [id, req.nutricionistaId]
     );
 
     res.json(resultado.rows);

@@ -2,17 +2,17 @@ const express = require('express');
 const router = express.Router();
 const pool = require('../db');
 
-// GET /pacientes/:id/relatorios -> lista relatórios do paciente, mais recente primeiro
 router.get('/:id/relatorios', async (req, res) => {
   const { id } = req.params;
 
   try {
     const resultado = await pool.query(
-      `SELECT id, tipo, periodo, status, criado_em
-       FROM relatorios
-       WHERE paciente_id = $1
-       ORDER BY criado_em DESC`,
-      [id]
+      `SELECT r.id, r.tipo, r.periodo, r.status, r.criado_em
+       FROM relatorios r
+       JOIN pacientes p ON p.id = r.paciente_id
+       WHERE r.paciente_id = $1 AND p.nutricionista_id = $2
+       ORDER BY r.criado_em DESC`,
+      [id, req.nutricionistaId]
     );
 
     res.json(resultado.rows);
@@ -22,7 +22,6 @@ router.get('/:id/relatorios', async (req, res) => {
   }
 });
 
-// POST /pacientes/:id/relatorios -> gera um novo relatório para o paciente
 router.post('/:id/relatorios', async (req, res) => {
   const { id } = req.params;
   const { tipo, periodo } = req.body;
@@ -32,6 +31,15 @@ router.post('/:id/relatorios', async (req, res) => {
   }
 
   try {
+    const paciente = await pool.query(
+      'SELECT id FROM pacientes WHERE id = $1 AND nutricionista_id = $2',
+      [id, req.nutricionistaId]
+    );
+
+    if (paciente.rows.length === 0) {
+      return res.status(404).json({ erro: 'Paciente não encontrado.' });
+    }
+
     const resultado = await pool.query(
       `INSERT INTO relatorios (paciente_id, tipo, periodo, status)
        VALUES ($1, $2, $3, 'concluido')

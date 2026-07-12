@@ -2,18 +2,19 @@ const express = require('express');
 const router = express.Router();
 const pool = require('../db');
 
-// GET /pacientes/:id/composicao -> última medição de composição corporal do paciente
+//-----------------------------------------------------------------------------------------
 router.get('/:id/composicao', async (req, res) => {
   const { id } = req.params;
 
   try {
     const resultado = await pool.query(
-      `SELECT peso, percentual_gordura, percentual_massa_magra, data_medicao
-       FROM composicao_corporal
-       WHERE paciente_id = $1
-       ORDER BY data_medicao DESC
+      `SELECT cc.peso, cc.percentual_gordura, cc.percentual_massa_magra, cc.data_medicao
+       FROM composicao_corporal cc
+       JOIN pacientes p ON p.id = cc.paciente_id
+       WHERE cc.paciente_id = $1 AND p.nutricionista_id = $2
+       ORDER BY cc.data_medicao DESC
        LIMIT 1`,
-      [id]
+      [id, req.nutricionistaId]
     );
 
     if (resultado.rows.length === 0) {
@@ -26,17 +27,19 @@ router.get('/:id/composicao', async (req, res) => {
     res.status(500).json({ erro: 'Erro ao buscar composição corporal.' });
   }
 });
-// GET /pacientes/:id/composicao/historico -> todas as medições do paciente, em ordem cronológica
+
+//-----------------------------------------------------------------------------------------
 router.get('/:id/composicao/historico', async (req, res) => {
   const { id } = req.params;
 
   try {
     const resultado = await pool.query(
-      `SELECT peso, percentual_gordura, percentual_massa_magra, data_medicao
-       FROM composicao_corporal
-       WHERE paciente_id = $1
-       ORDER BY data_medicao ASC`,
-      [id]
+      `SELECT cc.peso, cc.percentual_gordura, cc.percentual_massa_magra, cc.data_medicao
+       FROM composicao_corporal cc
+       JOIN pacientes p ON p.id = cc.paciente_id
+       WHERE cc.paciente_id = $1 AND p.nutricionista_id = $2
+       ORDER BY cc.data_medicao ASC`,
+      [id, req.nutricionistaId]
     );
 
     res.json(resultado.rows);
