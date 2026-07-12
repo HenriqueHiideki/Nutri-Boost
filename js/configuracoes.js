@@ -47,41 +47,43 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   document.getElementById("formPerfil")?.addEventListener("submit", async (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    const dadosPerfil = {
-      nome: document.getElementById("perfilNome").value.trim(),
-      email: document.getElementById("perfilEmail").value.trim(),
-      crn: document.getElementById("perfilCrn").value.trim(),
-      telefone: document.getElementById("perfilTelefone").value.trim(),
-      especialidade: document.getElementById("perfilEspecialidade").value.trim(),
-    };
+  const dadosPerfil = {
+    nome: document.getElementById("perfilNome").value.trim(),
+    email: document.getElementById("perfilEmail").value.trim(),
+    crn: document.getElementById("perfilCrn").value.trim(),
+    telefone: document.getElementById("perfilTelefone").value.trim(),
+    especialidade: document.getElementById("perfilEspecialidade").value.trim(),
+  };
 
-    try {
-      const resposta = await fetchAutenticado(`${API_URL}/perfil`, {
-        method: "PUT",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(dadosPerfil),
-      });
+  try {
+    const resposta = await fetchAutenticado(`${API_URL}/perfil`, {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(dadosPerfil),
+    });
 
-      const dados = await resposta.json();
+    const dados = await resposta.json();
 
-      if (!resposta.ok) {
-        mostrarToast(dados.erro || "Não foi possível atualizar o perfil.");
-        return;
-      }
-
-      const nutricionistaSalva = JSON.parse(localStorage.getItem("nutriboost_nutricionista") || "{}");
-      nutricionistaSalva.nome = dados.nome;
-      nutricionistaSalva.email = dados.email;
-      localStorage.setItem("nutriboost_nutricionista", JSON.stringify(nutricionistaSalva));
-
-      mostrarToast("Perfil atualizado com sucesso.");
-    } catch (erro) {
-      console.error(erro);
-      mostrarToast("Erro ao conectar com o servidor.");
+    if (!resposta.ok) {
+      mostrarToast(dados.erro || "Não foi possível atualizar o perfil.");
+      return;
     }
-  });
+
+    const nutricionistaSalva = JSON.parse(localStorage.getItem("nutriboost_nutricionista") || "{}");
+    nutricionistaSalva.nome = dados.nome;
+    nutricionistaSalva.email = dados.email;
+    localStorage.setItem("nutriboost_nutricionista", JSON.stringify(nutricionistaSalva));
+
+    atualizarNomeNoHeader();
+
+    mostrarToast("Perfil atualizado com sucesso.");
+  } catch (erro) {
+    console.error(erro);
+    mostrarToast("Erro ao conectar com o servidor.");
+  }
+});
 
   document.getElementById("formSenha")?.addEventListener("submit", async (e) => {
     e.preventDefault();
