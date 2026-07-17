@@ -11,39 +11,97 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="icon" href="./img/nutrition.png">
-    <script src="./js/login.js"></script>
 </head>
 
 <body>
     <section class="login-geral">
-        <div class="login-header">
-            <img src="./img/logo-nutri-boost.png" alt="Logo Nutri Boost" class="login-logo">
-        </div>
-        <div class="login-container">
-            <img src="./img/logo-nutri-boost.png" alt="Logo Nutri Boost" class="login-logo-inline">
-            <p class="login-title">Seja Bem-vindo!</p>
+        <div class="login-card">
 
-            <form action="/login.html" method="POST" class="login-form" id="formLogin">
-                <div class="login-box">
-                    <input type="email" id="usuario" name="usuario" required autocomplete="username" class="login-input" placeholder="Digite seu usuário / e-mail">
-                </div>
-                <div class="login-box">
-                    <input type="password" name="senha" id="senha" required autocomplete="current-password" class="login-input" placeholder="Digite sua senha">
+            <!-- Painel verde (visível só no desktop) -->
+            <div class="login-visual">
+                <div class="login-visual-brand">
+                    <img src="./img/logo-nutri-boost.png" alt="Logo Nutri Boost" class="login-visual-logo">
                 </div>
 
-                <p class="login-erro" id="loginErro" hidden></p>
-
-                <div class="login-bt-container">
-                    <button type="submit" class="login-bt" id="btnLogin">Entrar</button>
+                <div class="login-visual-content">
+                    <h1>Potencialize a jornada de seus pacientes.</h1>
+                    <p>Uma plataforma clínica completa, desenhada para nutricionistas que buscam excelência no acompanhamento e precisão nos resultados.</p>
                 </div>
-            </form>
 
-            <div class="login-text-align">
-                <a href="cadastro.html" class="login-text">Cadastre-se</a>
-                <a href="redefinicao.html" class="login-text">Redefinir a senha</a>
+                <div class="login-visual-stats">
+                    <div class="stat-item">
+                        <strong>120+</strong>
+                        <span>Pacientes acompanhados</span>
+                    </div>
+                    <div class="stat-item">
+                        <strong>100%</strong>
+                        <span>Dados protegidos</span>
+                    </div>
+                </div>
             </div>
+
+            <!-- Painel branco: formulário -->
+            <div class="login-container">
+                <img src="./img/logo-nutri-boost.png" alt="Logo Nutri Boost" class="login-logo-inline">
+
+                <p class="login-title">Seja bem-vinda!</p>
+                <p class="login-subtitle">Entre com suas credenciais para acessar o portal clínico.</p>
+
+                <form action="/login.html" method="POST" class="login-form" id="formLogin">
+                    <div class="login-box">
+                        <label for="usuario" class="login-label">Usuário / E-mail</label>
+                        <input type="email" id="usuario" name="usuario" required autocomplete="username"
+                            class="login-input" placeholder="nome@exemplo.com">
+                    </div>
+
+                    <div class="login-box">
+                        <div class="login-label-row">
+                            <label for="senha" class="login-label">Senha</label>
+                            <a href="redefinicao.html" class="login-link-inline">Redefinir a senha</a>
+                        </div>
+                        <div class="login-senha-wrapper">
+                            <input type="password" name="senha" id="senha" required autocomplete="current-password"
+                                class="login-input" placeholder="Digite sua senha">
+                            <button type="button" class="login-toggle-senha" id="toggleSenha" aria-label="Mostrar senha">
+                                <img src="./img/icon-open-eye.png" alt="icone olho aberto" id="iconeOlhoAberto" class="icons">
+                                <img src="./img/icon-closed-eye.png" alt="icone olho fechado" id="iconeOlhoFechado" class="icons">
+                            </button>
+                        </div>
+                    </div>
+
+                    <label class="login-checkbox-row">
+                        <input type="checkbox" id="lembrarAcesso">
+                        <span>Lembrar acesso neste dispositivo</span>
+                    </label>
+
+                    <p class="login-erro" id="loginErro" hidden></p>
+
+                    <div class="login-bt-container">
+                        <button type="submit" class="login-bt" id="btnLogin">
+                            <span id="btnLoginTexto">Entrar</span>
+                        </button>
+                    </div>
+                </form>
+
+                <div class="login-text-align">
+                    <span class="login-text-muted">Não possui uma conta?</span>
+                    <a href="cadastro.html" class="login-text">Cadastre-se</a>
+                </div>
+
+                <div class="login-rodape-links">
+                    <a href="ajuda.html" title="Ajuda" class="login-icone-rodape">
+                        <img src="./img/icon-help-cinza.png" alt="icone de ajuda" class="icons">
+                    </a>
+                    <a href="suporte.html" title="Suporte" class="login-icone-rodape">
+                        <img src="./img/icon-support-cinza.png" alt="icone de suporte" class="icons">
+                    </a>
+                </div>
+            </div>
+
         </div>
     </section>
+
+    <script src="./js/login.js"></script>
 </body>
 
 </html>

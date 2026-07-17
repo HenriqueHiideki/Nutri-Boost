@@ -4,16 +4,30 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("formLogin");
   const erroEl = document.getElementById("loginErro");
   const btnLogin = document.getElementById("btnLogin");
+  const btnLoginTexto = document.getElementById("btnLoginTexto");
+
+  // Alternar visibilidade da senha
+  const toggleSenha = document.getElementById("toggleSenha");
+  const campoSenha = document.getElementById("senha");
+  const iconeAberto = document.getElementById("iconeOlhoAberto");
+  const iconeFechado = document.getElementById("iconeOlhoFechado");
+
+  toggleSenha.addEventListener("click", () => {
+    const visivel = campoSenha.type === "text";
+    campoSenha.type = visivel ? "password" : "text";
+    iconeAberto.hidden = !visivel;
+    iconeFechado.hidden = visivel;
+  });
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
     const email = document.getElementById("usuario").value.trim();
-    const senha = document.getElementById("senha").value;
+    const senha = campoSenha.value;
 
     erroEl.hidden = true;
     btnLogin.disabled = true;
-    btnLogin.textContent = "Entrando...";
+    btnLoginTexto.textContent = "Entrando...";
 
     try {
       const resposta = await fetch(`${API_URL}/auth/login`, {
@@ -41,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
       erroEl.hidden = false;
     } finally {
       btnLogin.disabled = false;
-      btnLogin.textContent = "Entrar";
+      btnLoginTexto.textContent = "Entrar";
     }
   });
 });
